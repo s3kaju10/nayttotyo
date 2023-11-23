@@ -89,6 +89,16 @@ namespace laskuharjoituspeli
                 minus3lbl.Visible = false;
                 minus4lbl.Visible = false;
                 minus5lbl.Visible = false;
+                ilbl1.Visible = false;
+                ilbl2.Visible = false;
+                ilbl3.Visible = false;
+                ilbl4.Visible = false;
+                ilbl5.Visible = false;
+                ilbl6.Visible = false;
+                ilbl7.Visible = false;
+                ilbl8.Visible = false;
+                ilbl9.Visible = false;
+                ilbl10.Visible = false;
                 plusbtn.Visible = false;
                 minusbtn.Visible = false;
                 plusminusbtn.Visible = false;
@@ -121,9 +131,15 @@ namespace laskuharjoituspeli
             plus3lbl.Visible = true;
             plus4lbl.Visible = true;
             plus5lbl.Visible = true;
+            ilbl1.Visible = true;
+            ilbl2.Visible = true;
+            ilbl3.Visible = true;
+            ilbl4.Visible = true;
+            ilbl5.Visible = true;
             minusbtn.Visible = false;
             plusminusbtn.Visible = false;
             }
+            
 
         
 
@@ -145,6 +161,11 @@ namespace laskuharjoituspeli
             minus3lbl.Visible = true;
             minus4lbl.Visible = true;
             minus5lbl.Visible = true;
+            ilbl6.Visible = true;
+            ilbl7.Visible = true;
+            ilbl8.Visible = true;
+            ilbl9.Visible = true;
+            ilbl10.Visible = true;
             plusbtn.Visible = false;
             plusbtn.Visible = false;
             plusminusbtn.Visible = false;
@@ -183,10 +204,21 @@ namespace laskuharjoituspeli
             minus3lbl.Visible = true;
             minus4lbl.Visible = true;
             minus5lbl.Visible = true;
+            ilbl1.Visible = true;
+            ilbl2.Visible = true;
+            ilbl3.Visible = true;
+            ilbl4.Visible = true;
+            ilbl5.Visible = true;
+            ilbl6.Visible = true;
+            ilbl7.Visible = true;
+            ilbl8.Visible = true;
+            ilbl9.Visible = true;
+            ilbl10.Visible = true;
             plusbtn.Visible = false;
             minusbtn.Visible = false;
+        }
 
-        } 
+
        
     }
     }
