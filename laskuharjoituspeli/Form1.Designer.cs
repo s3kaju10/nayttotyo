@@ -94,6 +94,8 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.easybtn = new System.Windows.Forms.Button();
+            this.hardbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startbtn
@@ -737,11 +739,33 @@
             this.textBox10.Size = new System.Drawing.Size(65, 26);
             this.textBox10.TabIndex = 64;
             // 
+            // easybtn
+            // 
+            this.easybtn.Location = new System.Drawing.Point(63, 188);
+            this.easybtn.Name = "easybtn";
+            this.easybtn.Size = new System.Drawing.Size(74, 52);
+            this.easybtn.TabIndex = 65;
+            this.easybtn.Text = "Helppo";
+            this.easybtn.UseVisualStyleBackColor = true;
+            this.easybtn.Click += new System.EventHandler(this.easybtn_Click);
+            // 
+            // hardbtn
+            // 
+            this.hardbtn.Location = new System.Drawing.Point(181, 188);
+            this.hardbtn.Name = "hardbtn";
+            this.hardbtn.Size = new System.Drawing.Size(74, 52);
+            this.hardbtn.TabIndex = 66;
+            this.hardbtn.Text = "Vaikea";
+            this.hardbtn.UseVisualStyleBackColor = true;
+            this.hardbtn.Click += new System.EventHandler(this.hardbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 938);
+            this.Controls.Add(this.hardbtn);
+            this.Controls.Add(this.easybtn);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
@@ -882,6 +906,8 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button easybtn;
+        private System.Windows.Forms.Button hardbtn;
     }
 }
 
