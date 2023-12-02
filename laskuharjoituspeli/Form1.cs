@@ -1,16 +1,139 @@
 ﻿using System;
+using System.Data;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
+using System.Windows.Markup;
+using System.Xml.Schema;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace laskuharjoituspeli
 {
     public partial class Form1 : Form
     {
+
+
         private Random random = new Random();
         public Form1()
         {
             InitializeComponent();
+
+
+
+            int amount2 = 20;                    /* the number of places in the table */
+            int[] values2 = new int[amount2];
+            Random random3 = new Random();
+            for (int i = 0; i < amount2; i++)
+            {
+                values2[i] = random3.Next(1, 20);
+
+
+                if ((values2[0] < values2[1] || values2[2] < values2[3] || values2[4] < values2[5] || values2[6] < values2[7]
+                || values2[8] < values2[9] || values2[10] < values2[11] || values2[12] < values2[13] || values2[14] < values2[15]
+                || values2[16] < values2[17] || values2[18] < values2[19])) /* let's compare the values2 ​​so that every other number is smaller in the table,
+                                                                                 * because in minus calculations the difference must not be negative. */
+                {
+                    i--;
+                    { }
+                }
+                else
+                {
+
+                    nmb1lbl.Text = (values2[0].ToString());          /* the drawn numbers are entered on invoices */
+                    nmb2lbl.Text = (values2[1].ToString());
+                    nmb3lbl.Text = (values2[2].ToString());
+                    nmb4lbl.Text = (values2[3].ToString());
+                    nmb5lbl.Text = (values2[4].ToString());
+                    nmb6lbl.Text = (values2[5].ToString());
+                    nmb7lbl.Text = (values2[6].ToString());
+                    nmb8lbl.Text = (values2[7].ToString());
+                    nmb9lbl.Text = (values2[8].ToString());
+                    nmb10lbl.Text = (values2[9].ToString());
+                    nmb11lbl.Text = (values2[10].ToString());
+                    nmb12lbl.Text = (values2[11].ToString());
+                    nmb13lbl.Text = (values2[12].ToString());
+                    nmb14lbl.Text = (values2[13].ToString());
+                    nmb15lbl.Text = (values2[14].ToString());
+                    nmb16lbl.Text = (values2[15].ToString());
+                    nmb17lbl.Text = (values2[16].ToString());
+                    nmb18lbl.Text = (values2[17].ToString());
+                    nmb19lbl.Text = (values2[18].ToString());
+                    nmb20lbl.Text = (values2[19].ToString());
+
+
+                    int result1 = values2[0] + values2[1];
+                    int result2 = values2[2] + values2[3];
+                    int result3 = values2[4] + values2[5];
+                    int result4 = values2[6] + values2[7];
+                    int result5 = values2[8] + values2[9];
+                    int result6 = values2[10] - values2[11];
+                    int result7 = values2[12] - values2[13];
+                    int result8 = values2[14] - values2[15];
+                    int result9 = values2[16] - values2[17];
+                    int result10 = values2[18] - values2[19];
+
+                }
+                int amount = 20;
+                int[] values = new int[amount];
+                Random random = new Random();
+
+                for (int j = 0; j < amount; j++)
+                {
+                    values[j] = random.Next(1, 10);
+
+                    if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
+                    || values[8] < values[9] || values[10] < values[11] || values[12] < values[13] || values[14] < values[15]
+                    || values[16] < values[17] || values[18] < values[19])) /* let's compare the values ​​so that every other number is smaller in the table,
+                                                                                 * because in minus calculations the difference must not be negative. */
+                    {
+                        j--;
+                        { }
+                    }
+                    else
+                    {
+                        nmb1lbl.Text = (values[0].ToString());
+                        nmb2lbl.Text = (values[1].ToString());
+                        nmb3lbl.Text = (values[2].ToString());
+                        nmb4lbl.Text = (values[3].ToString());
+                        nmb5lbl.Text = (values[4].ToString());
+                        nmb6lbl.Text = (values[5].ToString());
+                        nmb7lbl.Text = (values[6].ToString());
+                        nmb8lbl.Text = (values[7].ToString());
+                        nmb9lbl.Text = (values[8].ToString());
+                        nmb10lbl.Text = (values[9].ToString());
+                        nmb11lbl.Text = (values[10].ToString());
+                        nmb12lbl.Text = (values[11].ToString());
+                        nmb13lbl.Text = (values[12].ToString());
+                        nmb14lbl.Text = (values[13].ToString());
+                        nmb15lbl.Text = (values[14].ToString());
+                        nmb16lbl.Text = (values[15].ToString());
+                        nmb17lbl.Text = (values[16].ToString());
+                        nmb18lbl.Text = (values[17].ToString());
+                        nmb19lbl.Text = (values[18].ToString());
+                        nmb20lbl.Text = (values[19].ToString());
+
+                        int result1 = values[0] + values[1];
+                        int result2 = values[2] + values[3];
+                        int result3 = values[4] + values[5];
+                        int result4 = values[6] + values[7];
+                        int result5 = values[8] + values[9];
+                        int result6 = values[10] - values[11];
+                        int result7 = values[12] - values[13];
+                        int result8 = values[14] - values[15];
+                        int result9 = values[16] - values[17];
+                        int result10 = values[18] - values[19];
+                    }
+
+
+
+                }
+
+            }
+
+
             {
 
 
@@ -97,24 +220,24 @@ namespace laskuharjoituspeli
 
         private void plusbtn_Click(object sender, EventArgs e)
         {
-                                                /* the player chooses plus option and
-                                                The numbers and plus signs are displayed*/
+            /* the player chooses plus option and
+            The numbers and plus signs are displayed*/
             minusbtn.Visible = false;
             plusminusbtn.Visible = false;
             easybtn.Visible = true;
             hardbtn.Visible = true;
             startbtn.Visible = false;
-            
+
+
+
+
+
         }
-
-
-
-
 
         private void minusbtn_Click(object sender, EventArgs e)
         {
-                                                                 /* the player chooses minus option and
-                                                                The numbers and minus signs are displayed*/           
+            /* the player chooses minus option and
+           The numbers and minus signs are displayed*/
             hardbtn.Visible = true;
             easybtn.Visible = true;
             plusbtn.Visible = false;
@@ -124,7 +247,7 @@ namespace laskuharjoituspeli
 
         private void plusminusbtn_Click(object sender, EventArgs e)
         {                                   /* the player chooses plus and minus option*/
-                                            /* The numbers and plus signs are displayed*/
+            /* The numbers and plus signs are displayed*/
             hardbtn.Visible = true;
             easybtn.Visible = true;
             plusbtn.Visible = false;
@@ -133,13 +256,10 @@ namespace laskuharjoituspeli
 
         }
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "1";                /* value of number button*/
-        }
 
         private void btn2_Click(object sender, EventArgs e)
         {
+
             textBox1.Text += "2";               /* value of number button*/
         }
 
@@ -185,226 +305,58 @@ namespace laskuharjoituspeli
 
         private void easybtn_Click(object sender, EventArgs e)
         {
-                                                   /* the player chooses difficulty level easy */
-            int amount1 = 20;                    /* the number of places in the table */
-            int[] values1 = new int[amount1];
-            Random random1 = new Random();       /* let's draw the numbers in the table*/
-            for (int i = 0; i < amount1; i++)
+
+            string choose = "easy";                 /* the player chooses difficulty level easy */
+            int amount = 20;
+            int[] values = new int[amount];
+            Random random = new Random();
+
+            for (int j = 0; j < amount; j++)
             {
+                values[j] = random.Next(1, 10);
 
-                values1[i] = random.Next(1, 10);  /* the drawn numbers are added to the table*/
-
-                if ((values1[0] < values1[1] || values1[2] < values1[3] || values1[4] < values1[5] || values1[6] < values1[7]
-                    || values1[8] < values1[9] || values1[10] < values1[11] || values1[12] < values1[13] || values1[14] < values1[15]
-                    || values1[16] < values1[17] || values1[18] < values1[19])) /* let's compare the values1 ​​so that every other number is smaller in the table,
+                if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
+                || values[8] < values[9] || values[10] < values[11] || values[12] < values[13] || values[14] < values[15]
+                || values[16] < values[17] || values[18] < values[19])) /* let's compare the values ​​so that every other number is smaller in the table,
                                                                                  * because in minus calculations the difference must not be negative. */
                 {
-                    i--;
-                    { }                                           /* if the condition is not met, the machine draws the value 
-                                                                       * according to the condition into the table and does not retrieve the number
-                                                                   */
+                    j--;
+                    { }
                 }
                 else
-
-                    nmb1lbl.Text = (values1[0].ToString());          /* the drawn numbers are entered on invoices */
-                nmb2lbl.Text = (values1[1].ToString());
-                nmb3lbl.Text = (values1[2].ToString());
-                nmb4lbl.Text = (values1[3].ToString());
-                nmb5lbl.Text = (values1[4].ToString());
-                nmb6lbl.Text = (values1[5].ToString());
-                nmb7lbl.Text = (values1[6].ToString());
-                nmb8lbl.Text = (values1[7].ToString());
-                nmb9lbl.Text = (values1[8].ToString());
-                nmb10lbl.Text = (values1[9].ToString());
-                nmb11lbl.Text = (values1[10].ToString());
-                nmb12lbl.Text = (values1[11].ToString());
-                nmb13lbl.Text = (values1[12].ToString());
-                nmb14lbl.Text = (values1[13].ToString());
-                nmb15lbl.Text = (values1[14].ToString());
-                nmb16lbl.Text = (values1[15].ToString());
-                nmb17lbl.Text = (values1[16].ToString());
-                nmb18lbl.Text = (values1[17].ToString());
-                nmb19lbl.Text = (values1[18].ToString());
-                nmb20lbl.Text = (values1[19].ToString());
-
-                if (plusbtn.Visible)                /* if the plus option is selected the game will show the numbers and signs for plus counts */
                 {
-                    nmb1lbl.Visible = true;
-                    nmb2lbl.Visible = true;
-                    nmb3lbl.Visible = true;
-                    nmb4lbl.Visible = true;
-                    nmb5lbl.Visible = true;
-                    nmb6lbl.Visible = true;
-                    nmb7lbl.Visible = true;
-                    nmb8lbl.Visible = true;
-                    nmb9lbl.Visible = true;
-                    nmb10lbl.Visible = true;
-                    plus1lbl.Visible = true;
-                    plus2lbl.Visible = true;
-                    plus3lbl.Visible = true;
-                    plus4lbl.Visible = true;
-                    plus5lbl.Visible = true;
-                    ilbl1.Visible = true;
-                    ilbl2.Visible = true;
-                    ilbl3.Visible = true;
-                    ilbl4.Visible = true;
-                    ilbl5.Visible = true;
-                    textBox1.Visible = true;
-                    textBox2.Visible = true;
-                    textBox3.Visible = true;
-                    textBox4.Visible = true;
-                    textBox5.Visible = true;
+                    nmb1lbl.Text = (values[0].ToString());
+                    nmb2lbl.Text = (values[1].ToString());
+                    nmb3lbl.Text = (values[2].ToString());
+                    nmb4lbl.Text = (values[3].ToString());
+                    nmb5lbl.Text = (values[4].ToString());
+                    nmb6lbl.Text = (values[5].ToString());
+                    nmb7lbl.Text = (values[6].ToString());
+                    nmb8lbl.Text = (values[7].ToString());
+                    nmb9lbl.Text = (values[8].ToString());
+                    nmb10lbl.Text = (values[9].ToString());
+                    nmb11lbl.Text = (values[10].ToString());
+                    nmb12lbl.Text = (values[11].ToString());
+                    nmb13lbl.Text = (values[12].ToString());
+                    nmb14lbl.Text = (values[13].ToString());
+                    nmb15lbl.Text = (values[14].ToString());
+                    nmb16lbl.Text = (values[15].ToString());
+                    nmb17lbl.Text = (values[16].ToString());
+                    nmb18lbl.Text = (values[17].ToString());
+                    nmb19lbl.Text = (values[18].ToString());
+                    nmb20lbl.Text = (values[19].ToString());
+
+                    int result1 = values[0] + values[1];
+                    int result2 = values[2] + values[3];
+                    int result3 = values[4] + values[5];
+                    int result4 = values[6] + values[7];
+                    int result5 = values[8] + values[9];
+                    int result6 = values[10] - values[11];
+                    int result7 = values[12] - values[13];
+                    int result8 = values[14] - values[15];
+                    int result9 = values[16] - values[17];
+                    int result10 = values[18] - values[19];
                 }
-                else if (minusbtn.Visible)
-                {                               /* if the minus option is selected, the game will display numbers and signs for minus counts*/
-                    nmb11lbl.Visible = true;
-                    nmb12lbl.Visible = true;
-                    nmb13lbl.Visible = true;
-                    nmb14lbl.Visible = true;
-                    nmb15lbl.Visible = true;
-                    nmb16lbl.Visible = true;
-                    nmb17lbl.Visible = true;
-                    nmb18lbl.Visible = true;
-                    nmb19lbl.Visible = true;
-                    nmb20lbl.Visible = true;
-                    ilbl6.Visible = true;
-                    ilbl7.Visible = true;
-                    ilbl8.Visible = true;
-                    ilbl9.Visible = true;
-                    ilbl10.Visible = true;
-                    minus1lbl.Visible = true;
-                    minus2lbl.Visible = true;
-                    minus3lbl.Visible = true;
-                    minus4lbl.Visible = true;
-                    minus5lbl.Visible = true;
-                    textBox6.Visible = true;
-                    textBox7.Visible = true;
-                    textBox8.Visible = true;
-                    textBox9.Visible = true;
-                    textBox10.Visible = true;
-                }
-                else
-                {                               /* when player clicks plusminus button the game opens a plus and minus field for calculations  */
-                    nmb1lbl.Visible = true;
-                    nmb2lbl.Visible = true;
-                    nmb3lbl.Visible = true;
-                    nmb4lbl.Visible = true;
-                    nmb5lbl.Visible = true;
-                    nmb6lbl.Visible = true;
-                    nmb7lbl.Visible = true;
-                    nmb8lbl.Visible = true;
-                    nmb9lbl.Visible = true;
-                    nmb10lbl.Visible = true;
-                    plus1lbl.Visible = true;
-                    plus2lbl.Visible = true;
-                    plus3lbl.Visible = true;
-                    plus4lbl.Visible = true;
-                    plus5lbl.Visible = true;
-                    ilbl1.Visible = true;
-                    ilbl2.Visible = true;
-                    ilbl3.Visible = true;
-                    ilbl4.Visible = true;
-                    ilbl5.Visible = true;
-                    ilbl6.Visible = true;
-                    ilbl7.Visible = true;
-                    ilbl8.Visible = true;
-                    ilbl9.Visible = true;
-                    ilbl10.Visible = true;
-                    textBox1.Visible = true;
-                    textBox2.Visible = true;
-                    textBox3.Visible = true;
-                    textBox4.Visible = true;
-                    textBox5.Visible = true;
-                    textBox6.Visible = true;
-                    textBox7.Visible = true;
-                    textBox8.Visible = true;
-                    textBox9.Visible = true;
-                    textBox10.Visible = true;
-                    nmb11lbl.Visible = true;
-                    nmb12lbl.Visible = true;
-                    nmb13lbl.Visible = true;
-                    nmb14lbl.Visible = true;
-                    nmb15lbl.Visible = true;
-                    nmb16lbl.Visible = true;
-                    nmb17lbl.Visible = true;
-                    nmb18lbl.Visible = true;
-                    nmb19lbl.Visible = true;
-                    nmb20lbl.Visible = true;
-                    ilbl6.Visible = true;
-                    ilbl7.Visible = true;
-                    ilbl8.Visible = true;
-                    ilbl9.Visible = true;
-                    ilbl10.Visible = true;
-                    minus1lbl.Visible = true;
-                    minus2lbl.Visible = true;
-                    minus3lbl.Visible = true;
-                    minus4lbl.Visible = true;
-                    minus5lbl.Visible = true;
-                }
-
-                
-                btn1.Visible = true;    /* number buttons open for counts */
-                btn2.Visible = true;
-                btn3.Visible = true;
-                btn4.Visible = true;
-                btn5.Visible = true;
-                btn6.Visible = true;
-                btn7.Visible = true;
-                btn8.Visible = true;
-                btn9.Visible = true;
-                btn0.Visible = true;
-                hardbtn.Visible = false;
-                startbtn.Visible = false;
-                easybtn.Visible = false;
-
-            }
-            
-
-        }
-    
-            private void hardbtn_Click(object sender, EventArgs e)
-        {                                           /* the player chooses difficulty level hard */
-
-            int amount2 = 20;                    /* the number of places in the table */
-                int[] values2 = new int[amount2];
-                Random random2 = new Random();       /* let's draw the numbers in the table*/
-            for (int i = 0; i < amount2; i++)
-            {
-
-                values2[i] = random.Next(1, 20);  /* the drawn numbers are added to the table*/
-
-                if ((values2[0] < values2[1] || values2[2] < values2[3] || values2[4] < values2[5] || values2[6] < values2[7]
-                    || values2[8] < values2[9] || values2[10] < values2[11] || values2[12] < values2[13] || values2[14] < values2[15]
-                    || values2[16] < values2[17] || values2[18] < values2[19])) /* let's compare the values ​​so that every other number is smaller in the table,
-                                                                                 * because in minus calculations the difference must not be negative. */
-                {
-                    i--;
-                    { }                                           /* if the condition is not met, the machine draws the value 
-                                                                       * according to the condition into the table and does not retrieve the number
- */
-                }
-                else
-
-                    nmb1lbl.Text = (values2[0].ToString());          /* the drawn numbers are entered on invoices */
-                nmb2lbl.Text = (values2[1].ToString());
-                nmb3lbl.Text = (values2[2].ToString());
-                nmb4lbl.Text = (values2[3].ToString());
-                nmb5lbl.Text = (values2[4].ToString());
-                nmb6lbl.Text = (values2[5].ToString());
-                nmb7lbl.Text = (values2[6].ToString());
-                nmb8lbl.Text = (values2[7].ToString());
-                nmb9lbl.Text = (values2[8].ToString());
-                nmb10lbl.Text = (values2[9].ToString());
-                nmb11lbl.Text = (values2[10].ToString());
-                nmb12lbl.Text = (values2[11].ToString());
-                nmb13lbl.Text = (values2[12].ToString());
-                nmb14lbl.Text = (values2[13].ToString());
-                nmb15lbl.Text = (values2[14].ToString());
-                nmb16lbl.Text = (values2[15].ToString());
-                nmb17lbl.Text = (values2[16].ToString());
-                nmb18lbl.Text = (values2[17].ToString());
-                nmb19lbl.Text = (values2[18].ToString());
-                nmb20lbl.Text = (values2[19].ToString());
 
                 btn1.Visible = true;
                 btn2.Visible = true;
@@ -419,125 +371,453 @@ namespace laskuharjoituspeli
                 easybtn.Visible = false;
                 hardbtn.Visible = false;
                 startbtn.Visible = false;
+
+
+
+                if (plusbtn.Visible)                    /* if the plus option is selected the game will show the numbers and signs for plus counts */
+                {
+                    nmb1lbl.Visible = true;
+                    nmb2lbl.Visible = true;
+                    nmb3lbl.Visible = true;
+                    nmb4lbl.Visible = true;
+                    nmb5lbl.Visible = true;
+                    nmb6lbl.Visible = true;
+                    nmb7lbl.Visible = true;
+                    nmb8lbl.Visible = true;
+                    nmb9lbl.Visible = true;
+                    nmb10lbl.Visible = true;
+                    plus1lbl.Visible = true;
+                    plus2lbl.Visible = true;
+                    plus3lbl.Visible = true;
+                    plus4lbl.Visible = true;
+                    plus5lbl.Visible = true;
+                    ilbl1.Visible = true;
+                    ilbl2.Visible = true;
+                    ilbl3.Visible = true;
+                    ilbl4.Visible = true;
+                    ilbl5.Visible = true;
+                    textBox1.Visible = true;
+                    textBox2.Visible = true;
+                    textBox3.Visible = true;
+                    textBox4.Visible = true;
+                    textBox5.Visible = true;
+                    checkbtn.Visible = true;
+
                 }
-            if (plusbtn.Visible)                    /* if the plus option is selected the game will show the numbers and signs for plus counts */
-            {
-                nmb1lbl.Visible = true;
-                nmb2lbl.Visible = true;
-                nmb3lbl.Visible = true;
-                nmb4lbl.Visible = true;
-                nmb5lbl.Visible = true;
-                nmb6lbl.Visible = true;
-                nmb7lbl.Visible = true;
-                nmb8lbl.Visible = true;
-                nmb9lbl.Visible = true;
-                nmb10lbl.Visible = true;
-                plus1lbl.Visible = true;
-                plus2lbl.Visible = true;
-                plus3lbl.Visible = true;
-                plus4lbl.Visible = true;
-                plus5lbl.Visible = true;
-                ilbl1.Visible = true;
-                ilbl2.Visible = true;
-                ilbl3.Visible = true;
-                ilbl4.Visible = true;
-                ilbl5.Visible = true;
-                textBox1.Visible = true;
-                textBox2.Visible = true;
-                textBox3.Visible = true;
-                textBox4.Visible = true;
-                textBox5.Visible = true;
-            }
-            else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
-            {
-                nmb11lbl.Visible = true;
-                nmb12lbl.Visible = true;
-                nmb13lbl.Visible = true;
-                nmb14lbl.Visible = true;
-                nmb15lbl.Visible = true;
-                nmb16lbl.Visible = true;
-                nmb17lbl.Visible = true;
-                nmb18lbl.Visible = true;
-                nmb19lbl.Visible = true;
-                nmb20lbl.Visible = true;
-                ilbl6.Visible = true;
-                ilbl7.Visible = true;
-                ilbl8.Visible = true;
-                ilbl9.Visible = true;
-                ilbl10.Visible = true;
-                minus1lbl.Visible = true;
-                minus2lbl.Visible = true;
-                minus3lbl.Visible = true;
-                minus4lbl.Visible = true;
-                minus5lbl.Visible = true;
-                textBox6.Visible = true;
-                textBox7.Visible = true;
-                textBox8.Visible = true;
-                textBox9.Visible = true;
-                textBox10.Visible = true;
-            }
-            else
-            {
-                                                /* when player clicks plusminus button the game opens a plus and minus field for calculations  */
-                nmb1lbl.Visible = true;
-                nmb2lbl.Visible = true;
-                nmb3lbl.Visible = true;
-                nmb4lbl.Visible = true;
-                nmb5lbl.Visible = true;
-                nmb6lbl.Visible = true;
-                nmb7lbl.Visible = true;
-                nmb8lbl.Visible = true;
-                nmb9lbl.Visible = true;
-                nmb10lbl.Visible = true;
-                plus1lbl.Visible = true;
-                plus2lbl.Visible = true;
-                plus3lbl.Visible = true;
-                plus4lbl.Visible = true;
-                plus5lbl.Visible = true;
-                ilbl1.Visible = true;
-                ilbl2.Visible = true;
-                ilbl3.Visible = true;
-                ilbl4.Visible = true;
-                ilbl5.Visible = true;
-                ilbl6.Visible = true;
-                ilbl7.Visible = true;
-                ilbl8.Visible = true;
-                ilbl9.Visible = true;
-                ilbl10.Visible = true;
-                textBox1.Visible = true;
-                textBox2.Visible = true;
-                textBox3.Visible = true;
-                textBox4.Visible = true;
-                textBox5.Visible = true;
-                textBox6.Visible = true;
-                textBox7.Visible = true;
-                textBox8.Visible = true;
-                textBox9.Visible = true;
-                textBox10.Visible = true;
-                nmb11lbl.Visible = true;
-                nmb12lbl.Visible = true;
-                nmb13lbl.Visible = true;
-                nmb14lbl.Visible = true;
-                nmb15lbl.Visible = true;
-                nmb16lbl.Visible = true;
-                nmb17lbl.Visible = true;
-                nmb18lbl.Visible = true;
-                nmb19lbl.Visible = true;
-                nmb20lbl.Visible = true;
-                ilbl6.Visible = true;
-                ilbl7.Visible = true;
-                ilbl8.Visible = true;
-                ilbl9.Visible = true;
-                ilbl10.Visible = true;
-                minus1lbl.Visible = true;
-                minus2lbl.Visible = true;
-                minus3lbl.Visible = true;
-                minus4lbl.Visible = true;
-                minus5lbl.Visible = true;
-            }
+                else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
+                {
+                    nmb11lbl.Visible = true;
+                    nmb12lbl.Visible = true;
+                    nmb13lbl.Visible = true;
+                    nmb14lbl.Visible = true;
+                    nmb15lbl.Visible = true;
+                    nmb16lbl.Visible = true;
+                    nmb17lbl.Visible = true;
+                    nmb18lbl.Visible = true;
+                    nmb19lbl.Visible = true;
+                    nmb20lbl.Visible = true;
+                    ilbl6.Visible = true;
+                    ilbl7.Visible = true;
+                    ilbl8.Visible = true;
+                    ilbl9.Visible = true;
+                    ilbl10.Visible = true;
+                    minus1lbl.Visible = true;
+                    minus2lbl.Visible = true;
+                    minus3lbl.Visible = true;
+                    minus4lbl.Visible = true;
+                    minus5lbl.Visible = true;
+                    textBox6.Visible = true;
+                    textBox7.Visible = true;
+                    textBox8.Visible = true;
+                    textBox9.Visible = true;
+                    textBox10.Visible = true;
+                    checkbtn.Visible = true;
                 }
+                else
+                {
+                    /* when player clicks plusminus button the game opens a plus and minus field for calculations  */
+                    nmb1lbl.Visible = true;
+                    nmb2lbl.Visible = true;
+                    nmb3lbl.Visible = true;
+                    nmb4lbl.Visible = true;
+                    nmb5lbl.Visible = true;
+                    nmb6lbl.Visible = true;
+                    nmb7lbl.Visible = true;
+                    nmb8lbl.Visible = true;
+                    nmb9lbl.Visible = true;
+                    nmb10lbl.Visible = true;
+                    plus1lbl.Visible = true;
+                    plus2lbl.Visible = true;
+                    plus3lbl.Visible = true;
+                    plus4lbl.Visible = true;
+                    plus5lbl.Visible = true;
+                    ilbl1.Visible = true;
+                    ilbl2.Visible = true;
+                    ilbl3.Visible = true;
+                    ilbl4.Visible = true;
+                    ilbl5.Visible = true;
+                    ilbl6.Visible = true;
+                    ilbl7.Visible = true;
+                    ilbl8.Visible = true;
+                    ilbl9.Visible = true;
+                    ilbl10.Visible = true;
+                    textBox1.Visible = true;
+                    textBox2.Visible = true;
+                    textBox3.Visible = true;
+                    textBox4.Visible = true;
+                    textBox5.Visible = true;
+                    textBox6.Visible = true;
+                    textBox7.Visible = true;
+                    textBox8.Visible = true;
+                    textBox9.Visible = true;
+                    textBox10.Visible = true;
+                    nmb11lbl.Visible = true;
+                    nmb12lbl.Visible = true;
+                    nmb13lbl.Visible = true;
+                    nmb14lbl.Visible = true;
+                    nmb15lbl.Visible = true;
+                    nmb16lbl.Visible = true;
+                    nmb17lbl.Visible = true;
+                    nmb18lbl.Visible = true;
+                    nmb19lbl.Visible = true;
+                    nmb20lbl.Visible = true;
+                    ilbl6.Visible = true;
+                    ilbl7.Visible = true;
+                    ilbl8.Visible = true;
+                    ilbl9.Visible = true;
+                    ilbl10.Visible = true;
+                    minus1lbl.Visible = true;
+                    minus2lbl.Visible = true;
+                    minus3lbl.Visible = true;
+                    minus4lbl.Visible = true;
+                    minus5lbl.Visible = true;
+                    checkbtn.Visible = true;
+                }
+
+                }
+
+            }
+
+            private void hardbtn_Click(object sender, EventArgs e)
+            {                                          /* the player chooses difficulty level hard */
+                string choose = "hard";
+            int amount2 = 20;                    /* the number of places in the table */
+            int[] values2 = new int[amount2];
+            Random random3 = new Random();
+            for (int i = 0; i < amount2; i++)
+            {
+                values2[i] = random3.Next(1, 20);
+
+
+                if ((values2[0] < values2[1] || values2[2] < values2[3] || values2[4] < values2[5] || values2[6] < values2[7]
+                || values2[8] < values2[9] || values2[10] < values2[11] || values2[12] < values2[13] || values2[14] < values2[15]
+                || values2[16] < values2[17] || values2[18] < values2[19])) /* let's compare the values2 ​​so that every other number is smaller in the table,
+                                                                                 * because in minus calculations the difference must not be negative. */
+                {
+                    i--;
+                    { }
+                }
+                else
+                {
+
+                    nmb1lbl.Text = (values2[0].ToString());          /* the drawn numbers are entered on invoices */
+                    nmb2lbl.Text = (values2[1].ToString());
+                    nmb3lbl.Text = (values2[2].ToString());
+                    nmb4lbl.Text = (values2[3].ToString());
+                    nmb5lbl.Text = (values2[4].ToString());
+                    nmb6lbl.Text = (values2[5].ToString());
+                    nmb7lbl.Text = (values2[6].ToString());
+                    nmb8lbl.Text = (values2[7].ToString());
+                    nmb9lbl.Text = (values2[8].ToString());
+                    nmb10lbl.Text = (values2[9].ToString());
+                    nmb11lbl.Text = (values2[10].ToString());
+                    nmb12lbl.Text = (values2[11].ToString());
+                    nmb13lbl.Text = (values2[12].ToString());
+                    nmb14lbl.Text = (values2[13].ToString());
+                    nmb15lbl.Text = (values2[14].ToString());
+                    nmb16lbl.Text = (values2[15].ToString());
+                    nmb17lbl.Text = (values2[16].ToString());
+                    nmb18lbl.Text = (values2[17].ToString());
+                    nmb19lbl.Text = (values2[18].ToString());
+                    nmb20lbl.Text = (values2[19].ToString());
+
+
+                    int result1 = values2[0] + values2[1];
+                    int result2 = values2[2] + values2[3];
+                    int result3 = values2[4] + values2[5];
+                    int result4 = values2[6] + values2[7];
+                    int result5 = values2[8] + values2[9];
+                    int result6 = values2[10] - values2[11];
+                    int result7 = values2[12] - values2[13];
+                    int result8 = values2[14] - values2[15];
+                    int result9 = values2[16] - values2[17];
+                    int result10 = values2[18] - values2[19];
+
+
+
+
+
+
+                }
+                    btn1.Visible = true;
+                    btn2.Visible = true;
+                    btn3.Visible = true;
+                    btn4.Visible = true;
+                    btn5.Visible = true;
+                    btn6.Visible = true;
+                    btn7.Visible = true;
+                    btn8.Visible = true;
+                    btn9.Visible = true;
+                    btn0.Visible = true;
+                    easybtn.Visible = false;
+                    hardbtn.Visible = false;
+                    startbtn.Visible = false;
+
+
+
+                    if (plusbtn.Visible)                    /* if the plus option is selected the game will show the numbers and signs for plus counts */
+                    {
+                        nmb1lbl.Visible = true;
+                        nmb2lbl.Visible = true;
+                        nmb3lbl.Visible = true;
+                        nmb4lbl.Visible = true;
+                        nmb5lbl.Visible = true;
+                        nmb6lbl.Visible = true;
+                        nmb7lbl.Visible = true;
+                        nmb8lbl.Visible = true;
+                        nmb9lbl.Visible = true;
+                        nmb10lbl.Visible = true;
+                        plus1lbl.Visible = true;
+                        plus2lbl.Visible = true;
+                        plus3lbl.Visible = true;
+                        plus4lbl.Visible = true;
+                        plus5lbl.Visible = true;
+                        ilbl1.Visible = true;
+                        ilbl2.Visible = true;
+                        ilbl3.Visible = true;
+                        ilbl4.Visible = true;
+                        ilbl5.Visible = true;
+                        textBox1.Visible = true;
+                        textBox2.Visible = true;
+                        textBox3.Visible = true;
+                        textBox4.Visible = true;
+                        textBox5.Visible = true;
+                        checkbtn.Visible = true;
+
+                    }
+                    else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
+                    {
+                        nmb11lbl.Visible = true;
+                        nmb12lbl.Visible = true;
+                        nmb13lbl.Visible = true;
+                        nmb14lbl.Visible = true;
+                        nmb15lbl.Visible = true;
+                        nmb16lbl.Visible = true;
+                        nmb17lbl.Visible = true;
+                        nmb18lbl.Visible = true;
+                        nmb19lbl.Visible = true;
+                        nmb20lbl.Visible = true;
+                        ilbl6.Visible = true;
+                        ilbl7.Visible = true;
+                        ilbl8.Visible = true;
+                        ilbl9.Visible = true;
+                        ilbl10.Visible = true;
+                        minus1lbl.Visible = true;
+                        minus2lbl.Visible = true;
+                        minus3lbl.Visible = true;
+                        minus4lbl.Visible = true;
+                        minus5lbl.Visible = true;
+                        textBox6.Visible = true;
+                        textBox7.Visible = true;
+                        textBox8.Visible = true;
+                        textBox9.Visible = true;
+                        textBox10.Visible = true;
+                        checkbtn.Visible = true;
+                    }
+                    else
+                    {
+                        /* when player clicks plusminus button the game opens a plus and minus field for calculations  */
+                        nmb1lbl.Visible = true;
+                        nmb2lbl.Visible = true;
+                        nmb3lbl.Visible = true;
+                        nmb4lbl.Visible = true;
+                        nmb5lbl.Visible = true;
+                        nmb6lbl.Visible = true;
+                        nmb7lbl.Visible = true;
+                        nmb8lbl.Visible = true;
+                        nmb9lbl.Visible = true;
+                        nmb10lbl.Visible = true;
+                        plus1lbl.Visible = true;
+                        plus2lbl.Visible = true;
+                        plus3lbl.Visible = true;
+                        plus4lbl.Visible = true;
+                        plus5lbl.Visible = true;
+                        ilbl1.Visible = true;
+                        ilbl2.Visible = true;
+                        ilbl3.Visible = true;
+                        ilbl4.Visible = true;
+                        ilbl5.Visible = true;
+                        ilbl6.Visible = true;
+                        ilbl7.Visible = true;
+                        ilbl8.Visible = true;
+                        ilbl9.Visible = true;
+                        ilbl10.Visible = true;
+                        textBox1.Visible = true;
+                        textBox2.Visible = true;
+                        textBox3.Visible = true;
+                        textBox4.Visible = true;
+                        textBox5.Visible = true;
+                        textBox6.Visible = true;
+                        textBox7.Visible = true;
+                        textBox8.Visible = true;
+                        textBox9.Visible = true;
+                        textBox10.Visible = true;
+                        nmb11lbl.Visible = true;
+                        nmb12lbl.Visible = true;
+                        nmb13lbl.Visible = true;
+                        nmb14lbl.Visible = true;
+                        nmb15lbl.Visible = true;
+                        nmb16lbl.Visible = true;
+                        nmb17lbl.Visible = true;
+                        nmb18lbl.Visible = true;
+                        nmb19lbl.Visible = true;
+                        nmb20lbl.Visible = true;
+                        ilbl6.Visible = true;
+                        ilbl7.Visible = true;
+                        ilbl8.Visible = true;
+                        ilbl9.Visible = true;
+                        ilbl10.Visible = true;
+                        minus1lbl.Visible = true;
+                        minus2lbl.Visible = true;
+                        minus3lbl.Visible = true;
+                        minus4lbl.Visible = true;
+                        minus5lbl.Visible = true;
+                        checkbtn.Visible = true;
+                    }
+
+
+                }
+
+            }
+
+            private void checkbtn_Click(object sender, EventArgs e)
+            {
+
+
+
+                int pnumbers1 = int.Parse(textBox1.Text);
+                int pnumbers2 = int.Parse(textBox2.Text);
+                int pnumbers3 = int.Parse(textBox3.Text);
+                int pnumbers4 = int.Parse(textBox4.Text);
+                int pnumbers5 = int.Parse(textBox5.Text);
+                int pnumbers6 = int.Parse(textBox6.Text);
+                int pnumbers7 = int.Parse(textBox7.Text);
+                int pnumbers8 = int.Parse(textBox8.Text);
+                int pnumbers9 = int.Parse(textBox9.Text);
+                int pnumbers10 = int.Parse(textBox10.Text);
+
+
+
+            }
+
+            private void textBox1_TextChanged(object sender, EventArgs e)
+            {
+                textBox1.MaxLength = 2;
+
+                textBox1.Focus();
+                if (textBox1.MaxLength == 2)
+                {
+                    textBox2.Focus();
+
+
+                }
+
+            }
+
+            private void btn1_Click(object sender, EventArgs e)
+            {
+                textBox1.Text += "1";
+
+            }
+
+            private void textBox2_TextChanged(object sender, EventArgs e)
+            {
+                textBox2.MaxLength = 2;
+                textBox2.Focus();
+                if (textBox2.MaxLength == 2)
+                {
+                    textBox3.Focus();
+                    textBox3.Text = "";
+
+                }
+
+            }
+
+            private void textBox3_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox4_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox5_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox6_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox7_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox8_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox9_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void textBox10_TextChanged(object sender, EventArgs e)
+            {
+
             }
         }
-    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
