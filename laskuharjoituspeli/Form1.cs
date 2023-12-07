@@ -21,14 +21,6 @@ namespace laskuharjoituspeli
         {
             InitializeComponent();
 
-
-
-
-
-
-
-
-
             /* numbers , plus and minus sings are hidden*/
 
             nmb1lbl.Visible = false;
@@ -102,21 +94,35 @@ namespace laskuharjoituspeli
 
 
         }
-        static int amount = 20;
-        int[] values = new int[amount];
-        Random random = new Random();
-        int result1;
-        int result2;
-        int result3;
-        int result4;
-        int result5;
-        int result6;
-        int result7;
-        int result8;
-        int result9;
-        int result10;
+              
+            static int amount = 20;
+            int[] values = new int[amount];
+            Random random = new Random();
+            int result1;
+            int result2;
+            int result3;
+            int result4;
+            int result5;
+            int result6;
+            int result7;
+            int result8;
+            int result9;
+            int result10;
 
-
+            int pnumbers1;
+            int pnumbers2;
+            int pnumbers3;
+            int pnumbers4;
+            int pnumbers5;
+            int pnumbers6;
+            int pnumbers7;
+            int pnumbers8;
+            int pnumbers9;
+            int pnumbers10;
+        
+            int ringhta = 0;    /* if player gives right answer "ringht! + 1 under the checkbtn"*/                                 
+            
+            
 
         private void startbtn_Click(object sender, EventArgs e)
         {                                   /* game start*/
@@ -134,9 +140,6 @@ namespace laskuharjoituspeli
             easybtn.Visible = true;
             hardbtn.Visible = true;
             startbtn.Visible = false;
-
-
-
 
 
         }
@@ -165,49 +168,535 @@ namespace laskuharjoituspeli
 
 
         private void btn2_Click(object sender, EventArgs e)
-        {
+        {                                                       /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "2";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
 
-            textBox1.Text += "2";               /* value of number button*/
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "2";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "2";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "2";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "2";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }            
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "2";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "2";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "2";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "2";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "2";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
+        
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "3";               /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "3";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "3";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "3";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "3";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "3";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "3";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "3";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "3";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "3";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "3";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn4_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "4";               /* value of number button*/
+        {                                 /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "4";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "4";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "4";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "4";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "4";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "4";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "4";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "4";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "4";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "4";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn5_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "5";               /* value of number button*/
+        {                                    /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "5";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "5";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "5";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "5";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "5";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "5";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "5";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "5";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "5";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "5";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn6_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "6";               /* value of number button*/
+        {                                       /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "6";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "6";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "6";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "6";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "6";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "6";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "6";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "6";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "6";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "6";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn7_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "7";               /* value of number button*/
+        {                                           /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "7";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "7";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "7";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "7";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "7";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "7";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "7";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "7";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "7";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "7";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn8_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "8";               /* value of number button*/
+        {                                               /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "8";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "8";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "8";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "8";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "8";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "8";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "8";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "8";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "8";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "8";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn9_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "9";               /* value of number button*/
+        {                                               /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "9";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "9";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "9";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "9";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "9";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "9";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "9";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "9";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "9";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "9";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void btn0_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "0";               /* value of number button*/
+        {                                                /* value of number button*/
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "0";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
+
+
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "0";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "0";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "0";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "0";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "0";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "0";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "0";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "0";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "0";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+            }
         }
 
         private void easybtn_Click(object sender, EventArgs e)
@@ -261,6 +750,89 @@ namespace laskuharjoituspeli
                     result8 = values[14] - values[15];
                     result9 = values[16] - values[17];
                     result10 = values[18] - values[19];
+                    if (result1 >= 10)
+                    {
+                        textBox1.MaxLength = 2;
+
+                    }
+                    else if (result1 < 10)
+                    {
+                        textBox1.MaxLength = 1;
+                    }
+                    if (result2 >= 10)
+                    {
+                        textBox2.MaxLength = 2;
+                    }
+                    else if (result2 < 10)
+                    {
+                        textBox2.MaxLength = 1;
+                    }
+                    if (result3 >= 10)
+                    {
+                        textBox3.MaxLength = 2;
+                    }
+                    else if (result3 < 10)
+                    {
+                        textBox3.MaxLength = 1;
+                    }
+                    if (result4 >= 10)
+                    {
+                        textBox4.MaxLength = 2;
+                    }
+                    else if (result4 < 10)
+                    {
+                        textBox4.MaxLength = 1;
+                    }
+                    if (result5 >= 10)
+                    {
+                        textBox5.MaxLength = 2;
+                    }
+                    else if (result5 < 10)
+                    {
+                        textBox5.MaxLength = 1;
+                    }
+                    if (result6 >= 10)
+                    {
+                        textBox6.MaxLength = 2;
+                    }
+                    else if (result6 < 10)
+                    {
+                        textBox6.MaxLength = 1;
+                    }
+                    if (result7 >= 10)
+                    {
+                        textBox7.MaxLength = 2;
+                    }
+                    else if (result7 < 10)
+                    {
+                        textBox7.MaxLength = 1;
+                    }
+                    if (result8 >= 10)
+                    {
+                        textBox8.MaxLength = 2;
+                    }
+                    else if (result8 < 10)
+                    {
+                        textBox8.MaxLength = 1;
+                    }
+                    if (result9 >= 10)
+                    {
+                        textBox9.MaxLength = 2;
+                    }
+                    else if (result9 < 10)
+                    {
+                        textBox9.MaxLength = 1;
+                    }
+                    if (result10 >= 10)
+                    {
+                        textBox10.MaxLength = 2;
+                    }
+                    else if (result10 < 10)
+                    {
+                        textBox10.MaxLength = 1;
+                    }
+
+
                 }
 
                 btn1.Visible = true;
@@ -406,10 +978,10 @@ namespace laskuharjoituspeli
         private void hardbtn_Click(object sender, EventArgs e)
         {                                          /* the player chooses difficulty level hard */
             string choose = "hard";
-
+            
             for (int i = 0; i < amount; i++)
             {
-                values[i] = random.Next(1, 20);
+                values[i] = random.Next(1, 100);
 
 
                 if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
@@ -455,9 +1027,89 @@ namespace laskuharjoituspeli
                     result8 = values[14] - values[15];
                     result9 = values[16] - values[17];
                     result10 = values[18] - values[19];
-
-
-
+                    
+                    if (result1 >= 10)
+                    {
+                        textBox1.MaxLength = 2;
+                        
+                    }
+                    else if (result1 < 10)
+                    {
+                        textBox1.MaxLength = 1;                       
+                    }
+                    if (result2 >= 10)
+                    {
+                        textBox2.MaxLength = 2;
+                    }
+                    else if (result2 < 10)
+                    {
+                        textBox2.MaxLength = 1;
+                    }
+                    if (result3 >= 10)
+                    {
+                        textBox3.MaxLength = 2;
+                    }
+                    else if (result3 < 10)
+                    {
+                        textBox3.MaxLength = 1;
+                    }
+                    if (result4 >= 10)
+                    {
+                        textBox4.MaxLength = 2;
+                    }
+                    else if (result4 < 10)
+                    {
+                        textBox4.MaxLength = 1;
+                    }
+                    if (result5 >= 10)
+                    {
+                        textBox5.MaxLength = 2;
+                    }
+                    else if (result5 < 10)
+                    {
+                        textBox5.MaxLength = 1;
+                    }
+                    if (result6 >= 10)
+                    {
+                        textBox6.MaxLength = 2;
+                    }
+                    else if (result6 < 10)
+                    {
+                        textBox6.MaxLength = 1;
+                    }
+                    if (result7 >= 10)
+                    {
+                        textBox7.MaxLength = 2;
+                    }
+                    else if (result7 < 10)
+                    {
+                        textBox7.MaxLength = 1;
+                    }
+                    if (result8 >= 10)
+                    {
+                        textBox8.MaxLength = 2;
+                    }
+                    else if (result8 < 10)
+                    {
+                        textBox8.MaxLength = 1;
+                    }
+                    if (result9 >= 10)
+                    {
+                        textBox9.MaxLength = 2;
+                    }
+                    else if (result9 < 10)
+                    {
+                        textBox9.MaxLength = 1;
+                    }
+                    if (result10 >= 10)
+                    {
+                        textBox10.MaxLength = 2;
+                    }
+                    else if (result10 < 10)
+                    {
+                        textBox10.MaxLength = 1;
+                    }
+                    
 
 
 
@@ -605,155 +1257,266 @@ namespace laskuharjoituspeli
 
         private void checkbtn_Click(object sender, EventArgs e)
         {
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
 
+                if (result1 == pnumbers1)
+                {
+                    textBox1.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result1 != pnumbers1)
+                {
+                    textBox1.BackColor = Color.Red;
+                }
+                if (result2 == pnumbers2)
+                {
+                    textBox2.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result2 != pnumbers2)
+                {
+                    textBox2.BackColor = Color.Red;
+                }
+                if (result3 == pnumbers3)
+                {
+                    textBox3.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result3 != pnumbers3)
+                {
+                    textBox3.BackColor = Color.Red;
+                }
+                if (result4 == pnumbers4)
+                {
+                    textBox4.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result4 != pnumbers4)
+                {
+                    textBox4.BackColor = Color.Red;
+                }
+                if (result5 == pnumbers5)
+                {
+                    textBox5.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result5 != pnumbers5)
+                {
+                    textBox5.BackColor = Color.Red;
+                }
+            }
+            if (minusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
 
-
-            int pnumbers1 = int.Parse(textBox1.Text);
-            int pnumbers2 = int.Parse(textBox2.Text);
-            int pnumbers3 = int.Parse(textBox3.Text);
-            int pnumbers4 = int.Parse(textBox4.Text);
-            int pnumbers5 = int.Parse(textBox5.Text);
-            int pnumbers6 = int.Parse(textBox6.Text);
-            int pnumbers7 = int.Parse(textBox7.Text);
-            int pnumbers8 = int.Parse(textBox8.Text);
-            int pnumbers9 = int.Parse(textBox9.Text);
-            int pnumbers10 = int.Parse(textBox10.Text);
-
+                if (result6 == pnumbers6)
+                {
+                    textBox6.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result6 != pnumbers6)
+                {
+                    textBox6.BackColor = Color.Red;
+                }
+                if (result7 == pnumbers7)
+                {
+                    textBox7.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result7 != pnumbers7)
+                {
+                    textBox7.BackColor = Color.Red;
+                }
+                if (result8 == pnumbers8)
+                {
+                    textBox8.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result8 != pnumbers8)
+                {
+                    textBox8.BackColor = Color.Red;
+                }
+                if (result9 == pnumbers9)
+                {
+                    textBox9.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result9 != pnumbers9)
+                {
+                    textBox9.BackColor = Color.Red;
+                }
+                if (result10 == pnumbers10)
+                {
+                    textBox10.BackColor = Color.Green;
+                    ringhta++;
+                }
+                else if (result10 != pnumbers10)
+                {
+                    textBox10.BackColor = Color.Red;
+                }
+            }
 
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.MaxLength = 2;
-
-            textBox1.Focus();
-
-            if (result1 < 10 && textBox1.TextLength == 1 || result1 >= 10 && textBox1.TextLength == 2)
+            if (textBox1.Text.Length == textBox1.MaxLength)
             {
                 textBox2.Focus();
-
-
             }
 
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "1";
-        
-            
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            {
+                if (textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "1";
+                    pnumbers1 += int.Parse(textBox1.Text);
+                }
 
+                else if (textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "1";
+                    pnumbers2 += int.Parse(textBox2.Text);
+                }
+                else if (textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "1";
+                    pnumbers3 += int.Parse(textBox3.Text);
+                }
+                else if (textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "1";
+                    pnumbers4 += int.Parse(textBox4.Text);
+                }
+                else if (textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "1";
+                    pnumbers5 += int.Parse(textBox5.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                {
+                    textBox6.Text += "1";
+                    pnumbers6 += int.Parse(textBox6.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                {
+                    textBox7.Text += "1";
+                    pnumbers7 += int.Parse(textBox7.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                {
+                    textBox8.Text += "1";
+                    pnumbers8 += int.Parse(textBox8.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                {
+                    textBox9.Text += "1";
+                    pnumbers9 += int.Parse(textBox9.Text);
+                }
+                else if (plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                {
+                    textBox10.Text += "1";
+                    pnumbers10 += int.Parse(textBox10.Text);
+                }
+
+            }
         }
+
+
+        
+                    
+                
+
+
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox2.MaxLength = 2;
 
-            textBox2.Focus();
-
-            if (result2 < 10 && textBox2.TextLength == 1 || result2 >= 10 && textBox2.TextLength == 2)
+            if (textBox2.Text.Length == textBox2.MaxLength)
             {
-
                 textBox3.Focus();
-
             }
+
 
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox3.MaxLength = 2;
-
-            textBox3.Focus();
-            if (textBox3.TextLength == 1 && result3 < 10 || textBox3.TextLength == 2 && result3 >= 10)
+            if (textBox3.Text.Length == textBox3.MaxLength)
             {
                 textBox4.Focus();
-
             }
+
 
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            textBox4.MaxLength = 2;
-
-            textBox4.Focus();
-            if (textBox4.TextLength == 1 && result4 < 10 || textBox4.TextLength == 2 && result4 >= 10)
+            if (textBox4.Text.Length == textBox4.MaxLength)
             {
                 textBox5.Focus();
-
             }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox5.MaxLength = 2;
-
-            textBox5.Focus();
-            if (textBox5.TextLength == 1 && result5 < 10 || textBox5.TextLength == 2 && result5 >= 10)
+            if (textBox5.Text.Length == textBox5.MaxLength)
             {
                 textBox6.Focus();
-
             }
+            
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            textBox6.MaxLength = 2;
-
-            textBox6.Focus();
-            if (textBox6.TextLength == 1 && result6 < 10 || textBox6.TextLength == 2 && result6 >= 10)
+            if (textBox6.Text.Length == textBox6.MaxLength)
             {
                 textBox7.Focus();
-
             }
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            textBox7.MaxLength = 2;
-
-            textBox7.Focus();
-            if (textBox7.TextLength == 1 && result7 < 10 || textBox7.TextLength == 2 && result7 >= 10)
+            if (textBox7.Text.Length == textBox7.MaxLength)
             {
                 textBox8.Focus();
-
             }
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            textBox8.MaxLength = 2;
-
-            textBox8.Focus();
-            if (textBox8.TextLength == 1 && result8 < 10 || textBox8.TextLength == 2 && result8 >= 10)
+            if (textBox8.Text.Length == textBox8.MaxLength)
             {
                 textBox9.Focus();
-
             }
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            textBox9.MaxLength = 2;
-
-            textBox9.Focus();
-            if (textBox9.TextLength == 1 && result9 < 10 || textBox9.TextLength == 2 && result9 >= 10)
+            if (textBox9.Text.Length == textBox9.MaxLength)
             {
                 textBox10.Focus();
-
             }
 
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-            textBox10.MaxLength = 2;
-
-            textBox10.Focus();
-
+            if (textBox3.Text.Length == textBox3.MaxLength)
+            {
+                
+            }
+            checkbtn.Focus();
+            checkbtn.BackColor = Color.Green;
         }
+
+       
     }
 }
 
