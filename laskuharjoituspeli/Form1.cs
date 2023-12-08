@@ -174,54 +174,54 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "2";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                    
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "2";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "2";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "2";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "2";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }            
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "2";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "2";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "2";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "2";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                   
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "2";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                    
                 }
             }
         
@@ -234,54 +234,54 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "3";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                    
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "3";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "3";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "3";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "3";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "3";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "3";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "3";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "3";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "3";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                    
                 }
             }
         }
@@ -293,54 +293,53 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "4";
-                    pnumbers1 += int.Parse(textBox1.Text);
-                }
 
+                }
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "4";
-                    pnumbers2 += int.Parse(textBox2.Text);
+
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "4";
-                    pnumbers3 += int.Parse(textBox3.Text);
+
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "4";
-                    pnumbers4 += int.Parse(textBox4.Text);
+
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "4";
-                    pnumbers5 += int.Parse(textBox5.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "4";
-                    pnumbers6 += int.Parse(textBox6.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "4";
-                    pnumbers7 += int.Parse(textBox7.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "4";
-                    pnumbers8 += int.Parse(textBox8.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "4";
-                    pnumbers9 += int.Parse(textBox9.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "4";
-                    pnumbers10 += int.Parse(textBox10.Text);
+
                 }
             }
         }
@@ -352,54 +351,54 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "5";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                   
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "5";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "5";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "5";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "5";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "5";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "5";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "5";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "5";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "5";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                    
                 }
             }
         }
@@ -411,54 +410,54 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "6";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                    
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "6";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "6";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "6";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "6";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "6";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "6";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "6";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "6";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "6";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                    
                 }
             }
         }
@@ -470,54 +469,53 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "7";
-                    pnumbers1 += int.Parse(textBox1.Text);
+
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "7";
-                    pnumbers2 += int.Parse(textBox2.Text);
+
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "7";
-                    pnumbers3 += int.Parse(textBox3.Text);
+
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "7";
-                    pnumbers4 += int.Parse(textBox4.Text);
+
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "7";
-                    pnumbers5 += int.Parse(textBox5.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "7";
-                    pnumbers6 += int.Parse(textBox6.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "7";
-                    pnumbers7 += int.Parse(textBox7.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "7";
-                    pnumbers8 += int.Parse(textBox8.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "7";
-                    pnumbers9 += int.Parse(textBox9.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "7";
-                    pnumbers10 += int.Parse(textBox10.Text);
                 }
             }
         }
@@ -529,54 +527,54 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "8";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                    
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "8";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "8";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "8";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "8";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "8";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "8";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "8";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "8";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                   
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "8";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                   
                 }
             }
         }
@@ -588,54 +586,54 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "9";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                    
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "9";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "9";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "9";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "9";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "9";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "9";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "9";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "9";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                   
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "9";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                    
                 }
             }
         }
@@ -647,54 +645,53 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "0";
-                    pnumbers1 += int.Parse(textBox1.Text);
+
                 }
 
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "0";
-                    pnumbers2 += int.Parse(textBox2.Text);
+
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "0";
-                    pnumbers3 += int.Parse(textBox3.Text);
+
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "0";
-                    pnumbers4 += int.Parse(textBox4.Text);
+
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "0";
-                    pnumbers5 += int.Parse(textBox5.Text);
                 }
                 else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "0";
-                    pnumbers6 += int.Parse(textBox6.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "0";
-                    pnumbers7 += int.Parse(textBox7.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "0";
-                    pnumbers8 += int.Parse(textBox8.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "0";
-                    pnumbers9 += int.Parse(textBox9.Text);
+
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "0";
-                    pnumbers10 += int.Parse(textBox10.Text);
+
                 }
             }
         }
@@ -981,7 +978,7 @@ namespace laskuharjoituspeli
             
             for (int i = 0; i < amount; i++)
             {
-                values[i] = random.Next(1, 100);
+                values[i] = random.Next(5, 15);
 
 
                 if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
@@ -1257,8 +1254,15 @@ namespace laskuharjoituspeli
 
         private void checkbtn_Click(object sender, EventArgs e)
         {
+            
+  
             if (plusbtn.Visible == true || plusminusbtn.Visible == true)
             {
+                pnumbers1 = int.Parse(textBox1.Text);
+                pnumbers2 = int.Parse(textBox2.Text);
+                pnumbers3 = int.Parse(textBox3.Text);
+                pnumbers4 = int.Parse(textBox4.Text);
+                pnumbers5 = int.Parse(textBox5.Text);
 
                 if (result1 == pnumbers1)
                 {
@@ -1306,8 +1310,14 @@ namespace laskuharjoituspeli
                     textBox5.BackColor = Color.Red;
                 }
             }
-            if (minusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (minusbtn.Visible == true || plusminusbtn.Visible == true && plusbtn.Visible == false)
             {
+                pnumbers6 = int.Parse(textBox6.Text);
+                pnumbers7 = int.Parse(textBox7.Text);
+                pnumbers8 = int.Parse(textBox8.Text);
+                pnumbers9 = int.Parse(textBox9.Text);
+                pnumbers10 = int.Parse(textBox10.Text);
+
 
                 if (result6 == pnumbers6)
                 {
@@ -1375,53 +1385,53 @@ namespace laskuharjoituspeli
                 if (textBox1.TextLength < result1.ToString().Length)
                 {
                     textBox1.Text += "1";
-                    pnumbers1 += int.Parse(textBox1.Text);
+                    
                 }
 
                 else if (textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "1";
-                    pnumbers2 += int.Parse(textBox2.Text);
+                    
                 }
                 else if (textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "1";
-                    pnumbers3 += int.Parse(textBox3.Text);
+                    
                 }
                 else if (textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "1";
-                    pnumbers4 += int.Parse(textBox4.Text);
+                    
                 }
                 else if (textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "1";
-                    pnumbers5 += int.Parse(textBox5.Text);
+                    
                 }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                else if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "1";
-                    pnumbers6 += int.Parse(textBox6.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "1";
-                    pnumbers7 += int.Parse(textBox7.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "1";
-                    pnumbers8 += int.Parse(textBox8.Text);
+                    
                 }
                 else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "1";
-                    pnumbers9 += int.Parse(textBox9.Text);
+                   
                 }
                 else if (plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "1";
-                    pnumbers10 += int.Parse(textBox10.Text);
+                    
                 }
 
             }
