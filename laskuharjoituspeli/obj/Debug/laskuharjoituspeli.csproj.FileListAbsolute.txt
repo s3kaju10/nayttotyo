@@ -8,3 +8,14 @@ C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\laskuharjoituspel
 C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.exe
 C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.pdb
 C:\Users\s3kaju10\source\repos\näyttötyö\laskuharjoituspeli\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.Laskuharjoituspeli.resources
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\bin\Debug\laskuharjoituspeli.exe.config
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\bin\Debug\laskuharjoituspeli.exe
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\bin\Debug\laskuharjoituspeli.pdb
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.csprojAssemblyReference.cache
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.Laskuharjoituspeli.resources
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.Properties.Resources.resources
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.csproj.GenerateResource.cache
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.csproj.CoreCompileInputs.cache
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.exe
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.pdb
+C:\Users\s3kaju10\source\repos\Näyttötyö\laskuharjoituspeli\obj\Debug\laskuharjoituspeli.Form2.resources

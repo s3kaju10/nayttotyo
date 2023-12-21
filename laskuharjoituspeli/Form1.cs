@@ -15,12 +15,30 @@ namespace laskuharjoituspeli
 {
     public partial class Laskuharjoituspeli : Form
     {
+        Form2 form2 = new Form2();
+        DateTime currentDate = DateTime.Now;
 
 
 
         public Laskuharjoituspeli()
         {
+
+
             InitializeComponent();
+            // Get the current date
+            DateTime currentDate = DateTime.Now;
+
+            // Check if a specific date is today
+            DateTime dateToCheck = new DateTime(2023, 1, 1);
+            bool isToday = dateToCheck.Date == currentDate.Date;
+
+            // Get the data to send
+            string dataToSend = currentDate.ToShortDateString();
+
+            // Open Form2 and set the TextBox value
+            
+            form2.ReceivedData = dataToSend;
+            form2.Show();
 
             /* numbers , plus and minus sings are hidden*/
 
@@ -1469,7 +1487,13 @@ namespace laskuharjoituspeli
                     playerresult3.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/10".ToString();
                     playerresult3.Visible = true;
                 }
+               
+
             }
+            
+            string dataToSend = ringhta.ToString() ;            
+            form2.ReceivedData =  dataToSend;
+            form2.Show();
             replay.Visible = true;
             plusbtn.Visible = false;
             minusbtn.Visible = false;
@@ -1760,6 +1784,23 @@ namespace laskuharjoituspeli
 
         private void close_Click(object sender, EventArgs e)
         {
+            /* jatka tästä*/
+            string path = "\\tulostallennus\\" + "txt" ;
+            StreamWriter file = new StreamWriter(path);
+            file.WriteLine(currentDate.ToString());
+            /* tämän yläpuolella ei toimi*/
+
+
+            form2.ReceivedData += "vastasit oikein".ToString();
+            form2.ReceivedData += currentDate.ToString();
+
+            string ReadText = File.ReadAllText("testi22.txt");  // Read the contents of the file
+            
+            Console.WriteLine(form2.ReceivedData);  // Output the content
+            
+
+            string writeText = form2.ReceivedData.ToString();  // Create a text string
+            File.WriteAllText("testi22.txt", writeText);  // Create a file and write the content of writeText to it
             Close();
         }
     }
