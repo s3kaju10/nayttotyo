@@ -8,16 +8,17 @@ using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using System.Windows.Markup;
 using System.Xml.Schema;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace laskuharjoituspeli
 {
-    public partial class Form1 : Form
+    public partial class Laskuharjoituspeli : Form
     {
 
 
 
-        public Form1()
+        public Laskuharjoituspeli()
         {
             InitializeComponent();
 
@@ -89,40 +90,48 @@ namespace laskuharjoituspeli
             btn0.Visible = false;
             easybtn.Visible = false;
             hardbtn.Visible = false;
-
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            playerresult1.Visible = false;
+            playerresult2.Visible = false;
+            playerresult3.Visible = false;
+            replay.Visible = false;
+            checkbtn.Visible = false;
+            close.Visible = true;
 
 
 
         }
-              
-            static int amount = 20;
-            int[] values = new int[amount];
-            Random random = new Random();
-            int result1;
-            int result2;
-            int result3;
-            int result4;
-            int result5;
-            int result6;
-            int result7;
-            int result8;
-            int result9;
-            int result10;
 
-            int pnumbers1;
-            int pnumbers2;
-            int pnumbers3;
-            int pnumbers4;
-            int pnumbers5;
-            int pnumbers6;
-            int pnumbers7;
-            int pnumbers8;
-            int pnumbers9;
-            int pnumbers10;
-        
-            int ringhta = 0;    /* if player gives right answer "ringht! + 1 under the checkbtn"*/                                 
-            
-            
+        static int amount = 20;
+        int[] values = new int[amount];
+        Random random = new Random();
+        int result1;
+        int result2;
+        int result3;
+        int result4;
+        int result5;
+        int result6;
+        int result7;
+        int result8;
+        int result9;
+        int result10;
+
+        int pnumbers1;
+        int pnumbers2;
+        int pnumbers3;
+        int pnumbers4;
+        int pnumbers5;
+        int pnumbers6;
+        int pnumbers7;
+        int pnumbers8;
+        int pnumbers9;
+        int pnumbers10;
+
+        int ringhta = 0;    /* if player gives right answer "ringht! + 1 under the checkbtn"*/
+
+
 
         private void startbtn_Click(object sender, EventArgs e)
         {                                   /* game start*/
@@ -169,530 +178,569 @@ namespace laskuharjoituspeli
 
         private void btn2_Click(object sender, EventArgs e)
         {                                                       /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "2";
-                    
-                }
-
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "2";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "2";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "2";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "2";
-                    
-                }            
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "2";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "2";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "2";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "2";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "2";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "2";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "2";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "2";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "2";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "2";
-                   
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "2";
-                    
+
                 }
+
             }
-        
+
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "3";
-                    
-                }
-
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "3";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "3";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "3";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "3";
-                    
-                }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "3";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "3";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "3";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "3";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "3";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "3";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "3";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "3";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "3";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "3";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "3";
-                    
+
                 }
+
             }
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {                                 /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
-                    textBox1.Text += "4";
-
+                    textBox6.Text += "4";
                 }
 
-                else if (textBox2.TextLength < result2.ToString().Length)
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "4";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "4";
 
                 }
-                else if (textBox3.TextLength < result3.ToString().Length)
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "4";
 
                 }
-                else if (textBox4.TextLength < result4.ToString().Length)
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "4";
 
                 }
-                else if (textBox5.TextLength < result5.ToString().Length)
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "4";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                else if (textBox6.Text == "")
                 {
                     textBox6.Text += "4";
-
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "4";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "4";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "4";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "4";
 
                 }
+
             }
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {                                    /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "5";
-                   
-                }
-
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "5";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "5";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "5";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "5";
-                    
-                }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "5";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "5";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "5";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "5";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "5";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "5";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "5";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "5";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "5";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "5";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "5";
-                    
+
                 }
+
             }
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {                                       /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "6";
-                    
-                }
-
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "6";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "6";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "6";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "6";
-                    
-                }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "6";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "6";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "6";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "6";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "6";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "6";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "6";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "6";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "6";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "6";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "6";
-                    
+
                 }
+
             }
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {                                           /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
-                    textBox1.Text += "7";
-
+                    textBox6.Text += "7";
                 }
 
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "7";
+                }
 
-                else if (textBox2.TextLength < result2.ToString().Length)
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "7";
 
                 }
-                else if (textBox3.TextLength < result3.ToString().Length)
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "7";
 
                 }
-                else if (textBox4.TextLength < result4.ToString().Length)
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "7";
 
                 }
-                else if (textBox5.TextLength < result5.ToString().Length)
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "7";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                else if (textBox6.Text == "")
                 {
                     textBox6.Text += "7";
-
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "7";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "7";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "7";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "7";
+
                 }
+
             }
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {                                               /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "8";
-                    
-                }
-
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "8";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "8";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "8";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "8";
-                    
-                }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "8";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "8";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "8";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "8";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "8";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "8";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "8";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "8";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "8";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "8";
-                   
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "8";
-                   
+
                 }
+
             }
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {                                               /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "9";
-                    
-                }
-
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "9";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "9";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "9";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "9";
-                    
-                }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "9";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "9";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "9";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "9";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "9";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "9";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "9";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "9";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "9";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "9";
-                   
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "9";
-                    
+
                 }
+
             }
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {                                                /* value of number button*/
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
-                    textBox1.Text += "0";
-
+                    textBox6.Text += "0";
                 }
 
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "0";
+                }
 
-                else if (textBox2.TextLength < result2.ToString().Length)
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
                 {
                     textBox2.Text += "0";
 
                 }
-                else if (textBox3.TextLength < result3.ToString().Length)
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
                 {
                     textBox3.Text += "0";
 
                 }
-                else if (textBox4.TextLength < result4.ToString().Length)
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
                 {
                     textBox4.Text += "0";
 
                 }
-                else if (textBox5.TextLength < result5.ToString().Length)
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
                 {
                     textBox5.Text += "0";
-                }
-                else if (plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
-                {
-                    textBox6.Text += "0";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "0";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "0";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "0";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "0";
 
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "0";
 
                 }
+
             }
         }
 
@@ -704,7 +752,7 @@ namespace laskuharjoituspeli
 
             for (int j = 0; j < amount; j++)
             {
-                values[j] = random.Next(1, 10);
+                values[j] = random.Next(1, 7);
 
                 if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
                 || values[8] < values[9] || values[10] < values[11] || values[12] < values[13] || values[14] < values[15]
@@ -875,7 +923,7 @@ namespace laskuharjoituspeli
                     textBox3.Visible = true;
                     textBox4.Visible = true;
                     textBox5.Visible = true;
-                    checkbtn.Visible = true;
+                    
 
                 }
                 else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
@@ -905,7 +953,7 @@ namespace laskuharjoituspeli
                     textBox8.Visible = true;
                     textBox9.Visible = true;
                     textBox10.Visible = true;
-                    checkbtn.Visible = true;
+                    
                 }
                 else
                 {
@@ -965,7 +1013,7 @@ namespace laskuharjoituspeli
                     minus3lbl.Visible = true;
                     minus4lbl.Visible = true;
                     minus5lbl.Visible = true;
-                    checkbtn.Visible = true;
+                    
                 }
 
             }
@@ -975,10 +1023,10 @@ namespace laskuharjoituspeli
         private void hardbtn_Click(object sender, EventArgs e)
         {                                          /* the player chooses difficulty level hard */
             string choose = "hard";
-            
+
             for (int i = 0; i < amount; i++)
             {
-                values[i] = random.Next(5, 15);
+                values[i] = random.Next(5, 12);
 
 
                 if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
@@ -1024,15 +1072,15 @@ namespace laskuharjoituspeli
                     result8 = values[14] - values[15];
                     result9 = values[16] - values[17];
                     result10 = values[18] - values[19];
-                    
+
                     if (result1 >= 10)
                     {
                         textBox1.MaxLength = 2;
-                        
+
                     }
                     else if (result1 < 10)
                     {
-                        textBox1.MaxLength = 1;                       
+                        textBox1.MaxLength = 1;
                     }
                     if (result2 >= 10)
                     {
@@ -1106,7 +1154,7 @@ namespace laskuharjoituspeli
                     {
                         textBox10.MaxLength = 1;
                     }
-                    
+
 
 
 
@@ -1154,7 +1202,7 @@ namespace laskuharjoituspeli
                     textBox3.Visible = true;
                     textBox4.Visible = true;
                     textBox5.Visible = true;
-                    checkbtn.Visible = true;
+                    
 
                 }
                 else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
@@ -1184,7 +1232,7 @@ namespace laskuharjoituspeli
                     textBox8.Visible = true;
                     textBox9.Visible = true;
                     textBox10.Visible = true;
-                    checkbtn.Visible = true;
+                    
                 }
                 else
                 {
@@ -1244,7 +1292,7 @@ namespace laskuharjoituspeli
                     minus3lbl.Visible = true;
                     minus4lbl.Visible = true;
                     minus5lbl.Visible = true;
-                    checkbtn.Visible = true;
+                   
                 }
 
 
@@ -1254,17 +1302,19 @@ namespace laskuharjoituspeli
 
         private void checkbtn_Click(object sender, EventArgs e)
         {
-            
-  
+
+
             if (plusbtn.Visible == true || plusminusbtn.Visible == true)
             {
-                pnumbers1 = int.Parse(textBox1.Text);
+                pnumbers1 = int.Parse(textBox1.Text);                    // if the plus button is visible, the program enters the numbers given by the player
                 pnumbers2 = int.Parse(textBox2.Text);
                 pnumbers3 = int.Parse(textBox3.Text);
                 pnumbers4 = int.Parse(textBox4.Text);
                 pnumbers5 = int.Parse(textBox5.Text);
 
-                if (result1 == pnumbers1)
+                if (result1 == pnumbers1)                      /* the program checks whether the numbers given by the player are correct.
+                                                                if the result is correct the text box turns green and if wrong the text box turns red.
+                                                                  ohjelma laskee oikeiden vastausten luku määrää muuttuujaan ringhta*/
                 {
                     textBox1.BackColor = Color.Green;
                     ringhta++;
@@ -1308,6 +1358,25 @@ namespace laskuharjoituspeli
                 else if (result5 != pnumbers5)
                 {
                     textBox5.BackColor = Color.Red;
+                }
+                if (plusbtn.Visible == true && ringhta >= 4)        /*when the program has calculated how many answers the player
+                                                                    * has calculated correctly, the program finally gives feedback to the player. */
+                {
+                    pictureBox1.Visible = true;
+                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();    
+                    playerresult1.Visible = true;
+                }
+                if (plusbtn.Visible == true && ringhta < 4 && ringhta >= 2)
+                {
+                    pictureBox2.Visible = true;
+                    playerresult2.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
+                    playerresult2.Visible = true;
+                }
+                if (plusbtn.Visible == true && ringhta < 2)
+                {
+                    pictureBox3.Visible = true;
+                    playerresult3.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
+                    playerresult3.Visible = true;
                 }
             }
             if (minusbtn.Visible == true || plusminusbtn.Visible == true && plusbtn.Visible == false)
@@ -1364,7 +1433,47 @@ namespace laskuharjoituspeli
                 {
                     textBox10.BackColor = Color.Red;
                 }
+                if (minusbtn.Visible == true && ringhta >= 4)
+                {
+                    pictureBox1.Visible = true;
+                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
+                    playerresult1.Visible = true;
+                }
+                if (minusbtn.Visible == true && ringhta < 4 && ringhta >= 2)
+                {
+                    pictureBox2.Visible = true;
+                    playerresult2.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
+                    playerresult2.Visible = true;
+                }
+                if (minusbtn.Visible == true && ringhta < 2)
+                {
+                    pictureBox3.Visible = true;
+                    playerresult3.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
+                    playerresult3.Visible = true;
+                }
+                if (plusminusbtn.Visible == true && ringhta >= 7)
+                {
+                    pictureBox1.Visible = true;
+                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/10".ToString();
+                    playerresult1.Visible = true;
+                }
+                if (plusminusbtn.Visible == true && ringhta < 7 && ringhta >= 4)
+                {
+                    pictureBox2.Visible = true;
+                    playerresult2.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/10".ToString();
+                    playerresult2.Visible = true;
+                }
+                if (plusminusbtn.Visible == true && ringhta < 4)
+                {
+                    pictureBox3.Visible = true;
+                    playerresult3.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/10".ToString();
+                    playerresult3.Visible = true;
+                }
             }
+            replay.Visible = true;
+            plusbtn.Visible = false;
+            minusbtn.Visible = false;
+            plusminusbtn.Visible = false;
 
 
         }
@@ -1374,76 +1483,82 @@ namespace laskuharjoituspeli
             if (textBox1.Text.Length == textBox1.MaxLength)
             {
                 textBox2.Focus();
+
             }
+
 
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (textBox1.TextLength < result1.ToString().Length)
-                {
-                    textBox1.Text += "1";
-                    
-                }
-
-                else if (textBox2.TextLength < result2.ToString().Length)
-                {
-                    textBox2.Text += "1";
-                    
-                }
-                else if (textBox3.TextLength < result3.ToString().Length)
-                {
-                    textBox3.Text += "1";
-                    
-                }
-                else if (textBox4.TextLength < result4.ToString().Length)
-                {
-                    textBox4.Text += "1";
-                    
-                }
-                else if (textBox5.TextLength < result5.ToString().Length)
-                {
-                    textBox5.Text += "1";
-                    
-                }
-                else if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
                     textBox6.Text += "1";
-                    
                 }
-                else if (plusminusbtn.Visible == true && textBox6.Text != "" && textBox7.TextLength < result7.ToString().Length)
+
+                else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
+                {
+                    textBox1.Text += "1";
+                }
+
+                else if (minusbtn.Visible == false && textBox2.TextLength < result2.ToString().Length)
+                {
+                    textBox2.Text += "1";
+
+                }
+                else if (minusbtn.Visible == false && textBox3.TextLength < result3.ToString().Length)
+                {
+                    textBox3.Text += "1";
+
+                }
+                else if (minusbtn.Visible == false && textBox4.TextLength < result4.ToString().Length)
+                {
+                    textBox4.Text += "1";
+
+                }
+                else if (minusbtn.Visible == false && textBox5.TextLength < result5.ToString().Length)
+                {
+                    textBox5.Text += "1";
+
+                }
+                else if (textBox6.Text == "")
+                {
+                    textBox6.Text += "1";
+                }
+
+                else if (textBox6.TextLength >= result6.ToString().Length && textBox7.TextLength < result7.ToString().Length || plusminusbtn.Visible == true && textBox5.Text != "" && textBox7.TextLength < result7.ToString().Length)
                 {
                     textBox7.Text += "1";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
+                else if (minusbtn.Visible == true && textBox8.TextLength < result8.ToString().Length || plusminusbtn.Visible == true && textBox7.Text != "" && textBox8.TextLength < result8.ToString().Length)
                 {
                     textBox8.Text += "1";
-                    
+
                 }
-                else if (plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
+                else if (minusbtn.Visible == true && textBox9.TextLength < result9.ToString().Length || plusminusbtn.Visible == true && textBox8.Text != "" && textBox9.TextLength < result9.ToString().Length)
                 {
                     textBox9.Text += "1";
-                   
+
                 }
-                else if (plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
+                else if (minusbtn.Visible == true && textBox10.TextLength < result10.ToString().Length || plusminusbtn.Visible == true && textBox9.Text != "" && textBox10.TextLength < result10.ToString().Length)
                 {
                     textBox10.Text += "1";
-                    
+
                 }
 
             }
         }
 
 
-        
-                    
-                
 
 
-        
+
+
+
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -1476,11 +1591,19 @@ namespace laskuharjoituspeli
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
+            if (plusbtn.Visible == true && textBox5.TextLength == result5.ToString().Length)
+            {
+                checkbtn.Visible = true;
+            }
+            if (minusbtn.Visible == true && textBox5.TextLength == result5.ToString().Length)
+            {
+                checkbtn.Visible = true;
+            }
             if (textBox5.Text.Length == textBox5.MaxLength)
             {
                 textBox6.Focus();
             }
-            
+
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -1518,15 +1641,127 @@ namespace laskuharjoituspeli
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3.Text.Length == textBox3.MaxLength)
+
+            if (plusminusbtn.Visible == true || minusbtn.Visible == true && textBox10.TextLength == result10.ToString().Length)
             {
-                
+                checkbtn.Visible = true;
             }
-            checkbtn.Focus();
-            checkbtn.BackColor = Color.Green;
         }
 
-       
+        private void replay_Click(object sender, EventArgs e)
+        {
+                                                                    /* Replay button hides the buttons and the number lbl and the result boxes and changes 
+                                                                     * the color of the result boxes to normal and finally the for loop clears the tables*/
+            nmb1lbl.Visible = false;
+            nmb2lbl.Visible = false;
+            nmb3lbl.Visible = false;
+            nmb4lbl.Visible = false;
+            nmb5lbl.Visible = false;
+            nmb6lbl.Visible = false;
+            nmb7lbl.Visible = false;
+            nmb8lbl.Visible = false;
+            nmb9lbl.Visible = false;
+            nmb10lbl.Visible = false;
+            nmb11lbl.Visible = false;
+            nmb12lbl.Visible = false;
+            nmb13lbl.Visible = false;
+            nmb14lbl.Visible = false;
+            nmb15lbl.Visible = false;
+            nmb16lbl.Visible = false;
+            nmb17lbl.Visible = false;
+            nmb18lbl.Visible = false;
+            nmb19lbl.Visible = false;
+            nmb20lbl.Visible = false;
+            plus1lbl.Visible = false;
+            plus2lbl.Visible = false;
+            plus3lbl.Visible = false;
+            plus4lbl.Visible = false;
+            plus5lbl.Visible = false;
+            minus1lbl.Visible = false;
+            minus2lbl.Visible = false;
+            minus3lbl.Visible = false;
+            minus4lbl.Visible = false;
+            minus5lbl.Visible = false;
+            ilbl1.Visible = false;
+            ilbl2.Visible = false;
+            ilbl3.Visible = false;
+            ilbl4.Visible = false;
+            ilbl5.Visible = false;
+            ilbl6.Visible = false;
+            ilbl7.Visible = false;
+            ilbl8.Visible = false;
+            ilbl9.Visible = false;
+            ilbl10.Visible = false;
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            textBox10.Visible = false;
+            checkbtn.Visible = false;
+            btn1.Visible = false;
+            btn2.Visible = false;
+            btn3.Visible = false;
+            btn4.Visible = false;
+            btn5.Visible = false;
+            btn6.Visible = false;
+            btn7.Visible = false;
+            btn8.Visible = false;
+            btn9.Visible = false;
+            btn0.Visible = false;
+            easybtn.Visible = false;
+            hardbtn.Visible = false;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            playerresult1.Visible = false;
+            playerresult2.Visible = false;
+            playerresult3.Visible = false;
+            plusbtn.Visible = true;
+            minusbtn.Visible = true;
+            plusminusbtn.Visible = true;
+            textBox1.Text= "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox1.BackColor = SystemColors.Control;
+            textBox2.BackColor = SystemColors.Control;
+            textBox3.BackColor = SystemColors.Control;
+            textBox4.BackColor = SystemColors.Control;
+            textBox5.BackColor = SystemColors.Control;
+            textBox6.BackColor = SystemColors.Control;
+            textBox7.BackColor = SystemColors.Control;
+            textBox8.BackColor = SystemColors.Control;
+            textBox9.BackColor = SystemColors.Control;
+            textBox10.BackColor = SystemColors.Control;
+            checkbtn.BackColor = SystemColors.Control;
+            ringhta = 0;
+            replay.Visible = false;
+            checkbtn.Visible = false;
+
+            for (int j = 0; j < amount; j++)
+            {
+                values[j] = 0;                          // the table is cleared
+
+            }
+
+
+                }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

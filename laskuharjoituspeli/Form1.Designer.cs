@@ -1,6 +1,6 @@
 ﻿namespace laskuharjoituspeli
 {
-    partial class Form1
+    partial class Laskuharjoituspeli
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.startbtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laskuharjoituspeli));
             this.nmb1lbl = new System.Windows.Forms.Label();
             this.nmb2lbl = new System.Windows.Forms.Label();
             this.plus1lbl = new System.Windows.Forms.Label();
@@ -96,23 +95,19 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.easybtn = new System.Windows.Forms.Button();
             this.hardbtn = new System.Windows.Forms.Button();
+            this.startbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.playerresult1 = new System.Windows.Forms.Label();
+            this.playerresult2 = new System.Windows.Forms.Label();
+            this.playerresult3 = new System.Windows.Forms.Label();
+            this.replay = new System.Windows.Forms.Button();
+            this.close = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // startbtn
-            // 
-            this.startbtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.startbtn.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startbtn.ForeColor = System.Drawing.Color.Blue;
-            this.startbtn.Image = ((System.Drawing.Image)(resources.GetObject("startbtn.Image")));
-            this.startbtn.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.startbtn.Location = new System.Drawing.Point(63, 271);
-            this.startbtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.startbtn.Name = "startbtn";
-            this.startbtn.Size = new System.Drawing.Size(270, 230);
-            this.startbtn.TabIndex = 0;
-            this.startbtn.Text = "Aloita peli";
-            this.startbtn.UseVisualStyleBackColor = false;
-            this.startbtn.Click += new System.EventHandler(this.startbtn_Click);
             // 
             // nmb1lbl
             // 
@@ -770,11 +765,116 @@
             this.hardbtn.UseVisualStyleBackColor = true;
             this.hardbtn.Click += new System.EventHandler(this.hardbtn_Click);
             // 
-            // Form1
+            // startbtn
+            // 
+            this.startbtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.startbtn.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startbtn.ForeColor = System.Drawing.Color.Blue;
+            this.startbtn.Image = ((System.Drawing.Image)(resources.GetObject("startbtn.Image")));
+            this.startbtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.startbtn.Location = new System.Drawing.Point(63, 248);
+            this.startbtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startbtn.Name = "startbtn";
+            this.startbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.startbtn.Size = new System.Drawing.Size(229, 262);
+            this.startbtn.TabIndex = 0;
+            this.startbtn.UseVisualStyleBackColor = false;
+            this.startbtn.Click += new System.EventHandler(this.startbtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(33, 516);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(382, 410);
+            this.pictureBox1.TabIndex = 67;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(442, 516);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(382, 410);
+            this.pictureBox2.TabIndex = 68;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(864, 516);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(382, 410);
+            this.pictureBox3.TabIndex = 69;
+            this.pictureBox3.TabStop = false;
+            // 
+            // playerresult1
+            // 
+            this.playerresult1.AutoSize = true;
+            this.playerresult1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerresult1.Location = new System.Drawing.Point(39, 929);
+            this.playerresult1.Name = "playerresult1";
+            this.playerresult1.Size = new System.Drawing.Size(98, 32);
+            this.playerresult1.TabIndex = 70;
+            this.playerresult1.Text = "label1";
+            // 
+            // playerresult2
+            // 
+            this.playerresult2.AutoSize = true;
+            this.playerresult2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerresult2.Location = new System.Drawing.Point(436, 929);
+            this.playerresult2.Name = "playerresult2";
+            this.playerresult2.Size = new System.Drawing.Size(98, 32);
+            this.playerresult2.TabIndex = 71;
+            this.playerresult2.Text = "label2";
+            // 
+            // playerresult3
+            // 
+            this.playerresult3.AutoSize = true;
+            this.playerresult3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerresult3.Location = new System.Drawing.Point(858, 929);
+            this.playerresult3.Name = "playerresult3";
+            this.playerresult3.Size = new System.Drawing.Size(98, 32);
+            this.playerresult3.TabIndex = 72;
+            this.playerresult3.Text = "label3";
+            // 
+            // replay
+            // 
+            this.replay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.replay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.replay.Location = new System.Drawing.Point(948, 433);
+            this.replay.Name = "replay";
+            this.replay.Size = new System.Drawing.Size(247, 52);
+            this.replay.TabIndex = 73;
+            this.replay.Text = "Pelaa uudelleen";
+            this.replay.UseVisualStyleBackColor = false;
+            this.replay.Click += new System.EventHandler(this.replay_Click);
+            // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Red;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.Location = new System.Drawing.Point(496, 964);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(247, 50);
+            this.close.TabIndex = 74;
+            this.close.Text = "Sulje ohjelma";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // Laskuharjoituspeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 851);
+            this.ClientSize = new System.Drawing.Size(1456, 1141);
+            this.Controls.Add(this.close);
+            this.Controls.Add(this.replay);
+            this.Controls.Add(this.playerresult3);
+            this.Controls.Add(this.playerresult2);
+            this.Controls.Add(this.playerresult1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.hardbtn);
             this.Controls.Add(this.easybtn);
             this.Controls.Add(this.textBox10);
@@ -843,8 +943,11 @@
             this.Controls.Add(this.nmb1lbl);
             this.Controls.Add(this.startbtn);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "Laskuharjoituspeli";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -919,6 +1022,14 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button easybtn;
         private System.Windows.Forms.Button hardbtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label playerresult1;
+        private System.Windows.Forms.Label playerresult2;
+        private System.Windows.Forms.Label playerresult3;
+        private System.Windows.Forms.Button replay;
+        private System.Windows.Forms.Button close;
     }
 }
 
