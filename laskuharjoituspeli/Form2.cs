@@ -25,9 +25,6 @@ namespace laskuharjoituspeli
 
         }
 
-        private void form2textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

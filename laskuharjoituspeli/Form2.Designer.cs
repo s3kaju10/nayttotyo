@@ -38,7 +38,7 @@
             this.form2textbox.Size = new System.Drawing.Size(597, 355);
             this.form2textbox.TabIndex = 0;
             this.form2textbox.Text = "";
-            this.form2textbox.TextChanged += new System.EventHandler(this.form2textbox_TextChanged);
+//            this.form2textbox.TextChanged += new System.EventHandler(this.form2textbox_TextChanged);
             // 
             // Form2
             // 

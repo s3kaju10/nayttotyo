@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
@@ -25,6 +26,7 @@ namespace laskuharjoituspeli
 
 
             InitializeComponent();
+           
             // Get the current date
             DateTime currentDate = DateTime.Now;
 
@@ -37,7 +39,7 @@ namespace laskuharjoituspeli
 
             // Open Form2 and set the TextBox value
             
-            form2.ReceivedData = dataToSend;
+            form2.ReceivedData = "\n".ToString() + dataToSend;
             form2.Show();
 
             /* numbers , plus and minus sings are hidden*/
@@ -122,11 +124,11 @@ namespace laskuharjoituspeli
 
         }
 
-        static int amount = 20;
+        static int amount = 20;                                                     // Create the variables needed in the game
         int[] values = new int[amount];
         Random random = new Random();
-        int result1;
-        int result2;
+        int result1;                                                                // The result variable is the correct answers to the numbers drawn by the machine
+        int result2;        
         int result3;
         int result4;
         int result5;
@@ -136,7 +138,7 @@ namespace laskuharjoituspeli
         int result9;
         int result10;
 
-        int pnumbers1;
+        int pnumbers1;                                                               //  pnumbers are the numbers given by the player, which I later compare with the result variables
         int pnumbers2;
         int pnumbers3;
         int pnumbers4;
@@ -149,7 +151,7 @@ namespace laskuharjoituspeli
 
         int ringhta = 0;    /* if player gives right answer "ringht! + 1 under the checkbtn"*/
 
-
+        public string writeText { get; private set; }
 
         private void startbtn_Click(object sender, EventArgs e)
         {                                   /* game start*/
@@ -198,7 +200,7 @@ namespace laskuharjoituspeli
         {                                                       /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                                    // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "2";
                 }
@@ -260,7 +262,7 @@ namespace laskuharjoituspeli
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)                    //// If statements compare whether the textbox is filled in so that the number is placed in the next box
             {
                 if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
@@ -325,7 +327,7 @@ namespace laskuharjoituspeli
         {                                 /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                                            // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "4";
                 }
@@ -388,7 +390,7 @@ namespace laskuharjoituspeli
         {                                    /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                        // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "5";
                 }
@@ -451,7 +453,7 @@ namespace laskuharjoituspeli
         {                                       /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                                // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "6";
                 }
@@ -514,7 +516,7 @@ namespace laskuharjoituspeli
         {                                           /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                            // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "7";
                 }
@@ -577,7 +579,7 @@ namespace laskuharjoituspeli
         {                                               /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                            // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "8";
                 }
@@ -640,7 +642,7 @@ namespace laskuharjoituspeli
         {                                               /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                        // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "9";
                 }
@@ -703,7 +705,7 @@ namespace laskuharjoituspeli
         {                                                /* value of number button*/
             if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
             {
-                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
+                if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)                                // If statements compare whether the textbox is filled in so that the number is placed in the next box
                 {
                     textBox6.Text += "0";
                 }
@@ -782,7 +784,7 @@ namespace laskuharjoituspeli
                 }
                 else
                 {
-                    nmb1lbl.Text = (values[0].ToString());
+                    nmb1lbl.Text = (values[0].ToString());                                      // The program adds the drawn numbers to lbl texts
                     nmb2lbl.Text = (values[1].ToString());
                     nmb3lbl.Text = (values[2].ToString());
                     nmb4lbl.Text = (values[3].ToString());
@@ -803,7 +805,7 @@ namespace laskuharjoituspeli
                     nmb19lbl.Text = (values[18].ToString());
                     nmb20lbl.Text = (values[19].ToString());
 
-                    result1 = values[0] + values[1];
+                    result1 = values[0] + values[1];                                                //Calculating Values table invoices to Result variables
                     result2 = values[2] + values[3];
                     result3 = values[4] + values[5];
                     result4 = values[6] + values[7];
@@ -813,7 +815,8 @@ namespace laskuharjoituspeli
                     result8 = values[14] - values[15];
                     result9 = values[16] - values[17];
                     result10 = values[18] - values[19];
-                    if (result1 >= 10)
+                    
+                    if (result1 >= 10)                                                          // set the maximum length for each text box
                     {
                         textBox1.MaxLength = 2;
 
@@ -898,7 +901,7 @@ namespace laskuharjoituspeli
 
                 }
 
-                btn1.Visible = true;
+                btn1.Visible = true;                                        // Let's bring out the number buttons and hide the buttons you don't need
                 btn2.Visible = true;
                 btn3.Visible = true;
                 btn4.Visible = true;
@@ -1058,7 +1061,7 @@ namespace laskuharjoituspeli
                 else
                 {
 
-                    nmb1lbl.Text = (values[0].ToString());          /* the drawn numbers are entered on invoices */
+                    nmb1lbl.Text = (values[0].ToString());                                              // The program adds the drawn numbers to lbl texts
                     nmb2lbl.Text = (values[1].ToString());
                     nmb3lbl.Text = (values[2].ToString());
                     nmb4lbl.Text = (values[3].ToString());
@@ -1080,7 +1083,7 @@ namespace laskuharjoituspeli
                     nmb20lbl.Text = (values[19].ToString());
 
 
-                    result1 = values[0] + values[1];
+                    result1 = values[0] + values[1];                                                //Calculating Values table invoices to Result variables
                     result2 = values[2] + values[3];
                     result3 = values[4] + values[5];
                     result4 = values[6] + values[7];
@@ -1091,7 +1094,7 @@ namespace laskuharjoituspeli
                     result9 = values[16] - values[17];
                     result10 = values[18] - values[19];
 
-                    if (result1 >= 10)
+                    if (result1 >= 10)                                                              // set the maximum length for each text box
                     {
                         textBox1.MaxLength = 2;
 
@@ -1177,7 +1180,7 @@ namespace laskuharjoituspeli
 
 
                 }
-                btn1.Visible = true;
+                btn1.Visible = true;                                                // Let's bring out the number buttons and hide the buttons you don't need
                 btn2.Visible = true;
                 btn3.Visible = true;
                 btn4.Visible = true;
@@ -1451,10 +1454,10 @@ namespace laskuharjoituspeli
                 {
                     textBox10.BackColor = Color.Red;
                 }
-                if (minusbtn.Visible == true && ringhta >= 4)
+                if (minusbtn.Visible == true && ringhta >= 4)                                                                   
                 {
                     pictureBox1.Visible = true;
-                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
+                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();    // Here, the program checks the size of the ringhta variable and shows the player how many calculations have been answered correctly
                     playerresult1.Visible = true;
                 }
                 if (minusbtn.Visible == true && ringhta < 4 && ringhta >= 2)
@@ -1490,10 +1493,18 @@ namespace laskuharjoituspeli
                
 
             }
-            
-            string dataToSend = ringhta.ToString() ;            
-            form2.ReceivedData =  dataToSend;
-            form2.Show();
+            if (plusbtn.Visible == true || minusbtn.Visible == true)
+            {
+                string dataToSend = "\nvastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString() + " laskutoimitukseen".ToString();
+                form2.ReceivedData += dataToSend;        // lisää tekstin form2 textboxiin
+                form2.Show();
+            }
+            if (plusminusbtn.Visible == true)
+            {
+                string dataToSend = "\nvastasit oikein ".ToString() + ringhta.ToString() + "/10".ToString() + " laskutoimitukseen".ToString();
+                form2.ReceivedData += dataToSend;        // lisää tekstin form2 textboxiin
+                form2.Show();
+            }
             replay.Visible = true;
             plusbtn.Visible = false;
             minusbtn.Visible = false;
@@ -1515,11 +1526,11 @@ namespace laskuharjoituspeli
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)
+            if (plusbtn.Visible == true || plusminusbtn.Visible == true || minusbtn.Visible == true)                                                                // If statements compare whether the textbox is filled in so that the number is placed in the next box
             {
                 if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
-                    textBox6.Text += "1";
+                    textBox6.Text += "1";   
                 }
 
                 else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
@@ -1584,10 +1595,10 @@ namespace laskuharjoituspeli
 
 
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)                   
         {
 
-            if (textBox2.Text.Length == textBox2.MaxLength)
+            if (textBox2.Text.Length == textBox2.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox3.Focus();
             }
@@ -1597,7 +1608,7 @@ namespace laskuharjoituspeli
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3.Text.Length == textBox3.MaxLength)
+            if (textBox3.Text.Length == textBox3.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox4.Focus();
             }
@@ -1607,7 +1618,7 @@ namespace laskuharjoituspeli
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            if (textBox4.Text.Length == textBox4.MaxLength)
+            if (textBox4.Text.Length == textBox4.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox5.Focus();
             }
@@ -1615,15 +1626,8 @@ namespace laskuharjoituspeli
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            if (plusbtn.Visible == true && textBox5.TextLength == result5.ToString().Length)
-            {
-                checkbtn.Visible = true;
-            }
-            if (minusbtn.Visible == true && textBox5.TextLength == result5.ToString().Length)
-            {
-                checkbtn.Visible = true;
-            }
-            if (textBox5.Text.Length == textBox5.MaxLength)
+
+            if (textBox5.Text.Length == textBox5.MaxLength)                                  // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox6.Focus();
             }
@@ -1632,7 +1636,7 @@ namespace laskuharjoituspeli
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            if (textBox6.Text.Length == textBox6.MaxLength)
+            if (textBox6.Text.Length == textBox6.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox7.Focus();
             }
@@ -1640,7 +1644,7 @@ namespace laskuharjoituspeli
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            if (textBox7.Text.Length == textBox7.MaxLength)
+            if (textBox7.Text.Length == textBox7.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox8.Focus();
             }
@@ -1648,7 +1652,7 @@ namespace laskuharjoituspeli
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            if (textBox8.Text.Length == textBox8.MaxLength)
+            if (textBox8.Text.Length == textBox8.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox9.Focus();
             }
@@ -1656,7 +1660,7 @@ namespace laskuharjoituspeli
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            if (textBox9.Text.Length == textBox9.MaxLength)
+            if (textBox9.Text.Length == textBox9.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
             {
                 textBox10.Focus();
             }
@@ -1666,7 +1670,7 @@ namespace laskuharjoituspeli
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
 
-            if (plusminusbtn.Visible == true || minusbtn.Visible == true && textBox10.TextLength == result10.ToString().Length)
+            if (plusminusbtn.Visible == true || minusbtn.Visible == true && textBox10.TextLength == result10.ToString().Length)     // The focus of the text box moves to the next text box if the current text box is full
             {
                 checkbtn.Visible = true;
             }
@@ -1758,7 +1762,7 @@ namespace laskuharjoituspeli
             textBox8.Text = "";
             textBox9.Text = "";
             textBox10.Text = "";
-            textBox1.BackColor = SystemColors.Control;
+            textBox1.BackColor = SystemColors.Control;                              // Return the normal background color of text boxes
             textBox2.BackColor = SystemColors.Control;
             textBox3.BackColor = SystemColors.Control;
             textBox4.BackColor = SystemColors.Control;
@@ -1769,7 +1773,7 @@ namespace laskuharjoituspeli
             textBox9.BackColor = SystemColors.Control;
             textBox10.BackColor = SystemColors.Control;
             checkbtn.BackColor = SystemColors.Control;
-            ringhta = 0;
+            ringhta = 0;                                                // set the ringhta converter to zero for replay
             replay.Visible = false;
             checkbtn.Visible = false;
 
@@ -1784,23 +1788,12 @@ namespace laskuharjoituspeli
 
         private void close_Click(object sender, EventArgs e)
         {
-            /* jatka tästä*/
-            string path = "\\tulostallennus\\" + "txt" ;
-            StreamWriter file = new StreamWriter(path);
-            file.WriteLine(currentDate.ToString());
-            /* tämän yläpuolella ei toimi*/
+          
 
-
-            form2.ReceivedData += "vastasit oikein".ToString();
-            form2.ReceivedData += currentDate.ToString();
-
-            string ReadText = File.ReadAllText("testi22.txt");  // Read the contents of the file
-            
             Console.WriteLine(form2.ReceivedData);  // Output the content
-            
+            string filepath = @"C:\Users\s3kaju10\source\repos\Näyttötyö\tulostalletus\Laskutoimitukset.txt";  // tuloksien tiedosto polku
+            File.AppendAllText(filepath, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon
 
-            string writeText = form2.ReceivedData.ToString();  // Create a text string
-            File.WriteAllText("testi22.txt", writeText);  // Create a file and write the content of writeText to it
             Close();
         }
     }
