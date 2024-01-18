@@ -16,13 +16,15 @@ namespace laskuharjoituspeli
         {
             get { return form2textbox.Text; }
             set { form2textbox.Text = value; }
+            
         }
 
 
         public Form2()
         {
             InitializeComponent();
-
+            
+            
         }
 
         

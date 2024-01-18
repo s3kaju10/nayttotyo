@@ -118,7 +118,7 @@ namespace laskuharjoituspeli
             playerresult3.Visible = false;
             replay.Visible = false;
             checkbtn.Visible = false;
-            close.Visible = true;
+            
 
 
 
@@ -1684,8 +1684,8 @@ namespace laskuharjoituspeli
 
         private void replay_Click(object sender, EventArgs e)
         {
-                                                                    /* Replay button hides the buttons and the number lbl and the result boxes and changes 
-                                                                     * the color of the result boxes to normal and finally the for loop clears the tables*/
+            /* Replay button hides the buttons and the number lbl and the result boxes and changes 
+             * the color of the result boxes to normal and finally the for loop clears the tables*/
             nmb1lbl.Visible = false;
             nmb2lbl.Visible = false;
             nmb3lbl.Visible = false;
@@ -1758,7 +1758,7 @@ namespace laskuharjoituspeli
             plusbtn.Visible = true;
             minusbtn.Visible = true;
             plusminusbtn.Visible = true;
-            textBox1.Text= "";
+            textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
@@ -1788,20 +1788,15 @@ namespace laskuharjoituspeli
                 values[j] = 0;                          // the table is cleared
 
             }
-
-
-                }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-          
-
             Console.WriteLine(form2.ReceivedData);  // Output the content
-            string filepath = @"C:\Users\s3kaju10\source\repos\Näyttötyö\tulostalletus\Laskutoimitukset.txt";  // results file path
-            File.AppendAllText(filepath, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon write to form2 textbox text to text filegit  
+            string filepath = @"C:\Users\s3kaju10\source\repos\Nayttotyo\tulostalletus\Laskutoimitukset.txt";  // results file path
+            File.AppendAllText(filepath, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon write to form2 textbox text to text file
+           
 
-            Close();
         }
+
+
+       
     }
 }
 
