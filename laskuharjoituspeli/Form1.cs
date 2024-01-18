@@ -1797,8 +1797,8 @@ namespace laskuharjoituspeli
           
 
             Console.WriteLine(form2.ReceivedData);  // Output the content
-            string filepath = @"C:\Users\s3kaju10\source\repos\Näyttötyö\tulostalletus\Laskutoimitukset.txt";  // tuloksien tiedosto polku
-            File.AppendAllText(filepath, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon
+            string filepath = @"C:\Users\s3kaju10\source\repos\Näyttötyö\tulostalletus\Laskutoimitukset.txt";  // results file path
+            File.AppendAllText(filepath, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon write to form2 textbox text to text filegit  
 
             Close();
         }
