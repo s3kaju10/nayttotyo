@@ -772,7 +772,7 @@ namespace laskuharjoituspeli
 
             for (int j = 0; j < amount; j++)
             {
-                values[j] = random.Next(1, 7);
+                values[j] = random.Next(1, 10);
 
                 if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
                 || values[8] < values[9] || values[10] < values[11] || values[12] < values[13] || values[14] < values[15]
@@ -1047,7 +1047,7 @@ namespace laskuharjoituspeli
 
             for (int i = 0; i < amount; i++)
             {
-                values[i] = random.Next(5, 12);
+                values[i] = random.Next(1, 20);
 
 
                 if ((values[0] < values[1] || values[2] < values[3] || values[4] < values[5] || values[6] < values[7]
@@ -1631,6 +1631,12 @@ namespace laskuharjoituspeli
             {
                 textBox6.Focus();
             }
+            if (plusbtn.Visible == true && textBox5.TextLength == textBox5.MaxLength)
+            {
+                checkbtn.Visible = true;
+            }
+
+
 
         }
 
