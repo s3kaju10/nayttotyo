@@ -26,6 +26,8 @@ Pelaajan vastattua kaikkiin laskutoimituksiin tulee esiin tarkista nappi.Tarkist
 Jokaisen pelatun kierroksen jälkeen vastatut tulokset kirjautuu toiseen ikkunaan ja samalla tekstitiesostoon. 
 
 ![seuranta](https://github.com/s3kaju10/nayttotyo/assets/151004539/d8491162-7684-4248-bb27-cef5a3cdb1f7)
+Jatko kehitys idea:
+Peliin voisi lisätä jako ja kertolaskut.
 
 
 
