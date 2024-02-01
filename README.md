@@ -26,6 +26,18 @@ Pelaajan vastattua kaikkiin laskutoimituksiin tulee esiin tarkista nappi.Tarkist
 Jokaisen pelatun kierroksen jälkeen vastatut tulokset kirjautuu toiseen ikkunaan ja samalla tekstitiesostoon. 
 
 ![seuranta](https://github.com/s3kaju10/nayttotyo/assets/151004539/d8491162-7684-4248-bb27-cef5a3cdb1f7)
+## Esittely koodista
+### Esitellään muuttujat koneen arpomista numeroista ja pelaajan antamista numeroista
+![Esitelläänmuuttuja](https://github.com/s3kaju10/nayttotyo/assets/151004539/7d251022-ac41-49d3-9be1-e1c605310704)
+### Arvotaan numerot ja lasketaan laskutoimitukset result muuttujiin
+![Arvotaan numerot](https://github.com/s3kaju10/nayttotyo/assets/151004539/302540d3-9b44-467d-bc1a-ab9a3a7b6de8)
+### Jokaisella buttonilla on ehdot, että textboxin täytyttyä result muuttujan mittaiseksi lisää buttoni numeron seuraavaan textboxiin
+![nappienehdot](https://github.com/s3kaju10/nayttotyo/assets/151004539/0dd549b8-3423-4e6e-950a-3c9ee30faf37)
+### Pelaajan painettua checkbuttonia tarkastaa ohjelma annetut vastaukset
+![tarkastetaan](https://github.com/s3kaju10/nayttotyo/assets/151004539/8c73c697-8650-4e6f-b4cf-0d092858cc5f)
+### Tarkastuksen jälkeen antaa ohjelma pelaajalle palautteen
+![Annetaanpalaute](https://github.com/s3kaju10/nayttotyo/assets/151004539/df4b1849-a12f-4732-9172-4344127df47d)
+
 Jatko kehitys idea:
 Peliin voisi lisätä jako ja kertolaskut.
 
