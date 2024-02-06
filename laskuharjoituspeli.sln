@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laskuharjoituspeli", "laskuharjoituspeli\laskuharjoituspeli.csproj", "{AA43D96A-18D3-483F-B524-7F167A9C6C5B}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "laskuharjoituspeliSetup", "laskuharjoituspeliSetup\laskuharjoituspeliSetup.vdproj", "{C07244F2-524D-4957-8CB0-A696E5E60685}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Laskuharjoituspeli.Setup", "Laskuharjoituspeli.Setup\Laskuharjoituspeli.Setup.vdproj", "{A02A50A6-4055-46F6-9986-F234AF60C1A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{AA43D96A-18D3-483F-B524-7F167A9C6C5B}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
 		{AA43D96A-18D3-483F-B524-7F167A9C6C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA43D96A-18D3-483F-B524-7F167A9C6C5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C07244F2-524D-4957-8CB0-A696E5E60685}.Debug|Any CPU.ActiveCfg = Debug
-		{C07244F2-524D-4957-8CB0-A696E5E60685}.DefaultBuild|Any CPU.ActiveCfg = Debug
-		{C07244F2-524D-4957-8CB0-A696E5E60685}.Release|Any CPU.ActiveCfg = Release
+		{A02A50A6-4055-46F6-9986-F234AF60C1A6}.Debug|Any CPU.ActiveCfg = Debug
+		{A02A50A6-4055-46F6-9986-F234AF60C1A6}.DefaultBuild|Any CPU.ActiveCfg = Debug
+		{A02A50A6-4055-46F6-9986-F234AF60C1A6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

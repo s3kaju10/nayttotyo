@@ -26,7 +26,7 @@ namespace laskuharjoituspeli
 
 
             InitializeComponent();
-           
+
             // Get the current date
             DateTime currentDate = DateTime.Now;
 
@@ -38,8 +38,8 @@ namespace laskuharjoituspeli
             string dataToSend = currentDate.ToShortDateString();
 
             // Open Form2 and set the TextBox value
-            
-            form2.ReceivedData = "\n".ToString() + dataToSend;
+
+            form2.ReceivedData = "\n Pvm: ".ToString() + dataToSend;
             form2.Show();
 
             /* numbers , plus and minus sings are hidden*/
@@ -118,7 +118,7 @@ namespace laskuharjoituspeli
             playerresult3.Visible = false;
             replay.Visible = false;
             checkbtn.Visible = false;
-            
+
 
 
 
@@ -128,7 +128,7 @@ namespace laskuharjoituspeli
         int[] values = new int[amount];
         Random random = new Random();
         int result1;                                                                // The result variable is the correct answers to the numbers drawn by the machine
-        int result2;        
+        int result2;
         int result3;
         int result4;
         int result5;
@@ -815,7 +815,7 @@ namespace laskuharjoituspeli
                     result8 = values[14] - values[15];
                     result9 = values[16] - values[17];
                     result10 = values[18] - values[19];
-                    
+
                     if (result1 >= 10)                                                          // set the maximum length for each text box
                     {
                         textBox1.MaxLength = 2;
@@ -944,7 +944,7 @@ namespace laskuharjoituspeli
                     textBox3.Visible = true;
                     textBox4.Visible = true;
                     textBox5.Visible = true;
-                    
+
 
                 }
                 else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
@@ -974,7 +974,7 @@ namespace laskuharjoituspeli
                     textBox8.Visible = true;
                     textBox9.Visible = true;
                     textBox10.Visible = true;
-                    
+
                 }
                 else
                 {
@@ -1034,7 +1034,7 @@ namespace laskuharjoituspeli
                     minus3lbl.Visible = true;
                     minus4lbl.Visible = true;
                     minus5lbl.Visible = true;
-                    
+
                 }
 
             }
@@ -1223,7 +1223,7 @@ namespace laskuharjoituspeli
                     textBox3.Visible = true;
                     textBox4.Visible = true;
                     textBox5.Visible = true;
-                    
+
 
                 }
                 else if (minusbtn.Visible)                      /* if the minus option is selected, the game will display numbers and signs for minus counts*/
@@ -1253,7 +1253,7 @@ namespace laskuharjoituspeli
                     textBox8.Visible = true;
                     textBox9.Visible = true;
                     textBox10.Visible = true;
-                    
+
                 }
                 else
                 {
@@ -1313,7 +1313,7 @@ namespace laskuharjoituspeli
                     minus3lbl.Visible = true;
                     minus4lbl.Visible = true;
                     minus5lbl.Visible = true;
-                   
+
                 }
 
 
@@ -1384,7 +1384,7 @@ namespace laskuharjoituspeli
                                                                     * has calculated correctly, the program finally gives feedback to the player. */
                 {
                     pictureBox1.Visible = true;
-                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();    
+                    playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();
                     playerresult1.Visible = true;
                 }
                 if (plusbtn.Visible == true && ringhta < 4 && ringhta >= 2)
@@ -1454,7 +1454,7 @@ namespace laskuharjoituspeli
                 {
                     textBox10.BackColor = Color.Red;
                 }
-                if (minusbtn.Visible == true && ringhta >= 4)                                                                   
+                if (minusbtn.Visible == true && ringhta >= 4)
                 {
                     pictureBox1.Visible = true;
                     playerresult1.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/5".ToString();    // Here, the program checks the size of the ringhta variable and shows the player how many calculations have been answered correctly
@@ -1490,7 +1490,7 @@ namespace laskuharjoituspeli
                     playerresult3.Text = "vastasit oikein ".ToString() + ringhta.ToString() + "/10".ToString();
                     playerresult3.Visible = true;
                 }
-               
+
 
             }
             if (plusbtn.Visible == true || minusbtn.Visible == true)
@@ -1530,7 +1530,7 @@ namespace laskuharjoituspeli
             {
                 if (minusbtn.Visible == true && textBox6.TextLength < result6.ToString().Length)
                 {
-                    textBox6.Text += "1";   
+                    textBox6.Text += "1";
                 }
 
                 else if (minusbtn.Visible == false && textBox1.TextLength < result1.ToString().Length)
@@ -1595,7 +1595,7 @@ namespace laskuharjoituspeli
 
 
 
-        private void textBox2_TextChanged(object sender, EventArgs e)                   
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
             if (textBox2.Text.Length == textBox2.MaxLength)                                 // The focus of the text box moves to the next text box if the current text box is full
@@ -1783,22 +1783,78 @@ namespace laskuharjoituspeli
             replay.Visible = false;
             checkbtn.Visible = false;
 
+
             for (int j = 0; j < amount; j++)
             {
                 values[j] = 0;                          // the table is cleared
 
             }
-            Console.WriteLine(form2.ReceivedData);  // Output the content
-            string filepath = @"C:\Users\s3kaju10\source\repos\Nayttotyo\tulostalletus\Laskutoimitukset.txt";  // results file path
-            File.AppendAllText(filepath, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon write to form2 textbox text to text file
+
+            string dir = @"C:\Users\s3kaju10\source\repos\Nayttotyo\tulostalletus";
+            string filename = @"C:\Users\s3kaju10\source\repos\Nayttotyo\tulostalletus\Laskutoimitukset.txt";
+
+            try
+            {
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+            }
+            catch
+            { }
+            try
+            {
+                if (!File.Exists(filename))
+                {
+                    File.Create("tulostalletus.txt");
+                }
+                else if (File.Exists(filename) && (Directory.Exists(dir))) 
+                {
+                    Console.WriteLine(form2.ReceivedData);  // Output the content
+                    filename = @"C:\Users\s3kaju10\source\repos\Nayttotyo\tulostalletus\Laskutoimitukset.txt";  // results file path
+                    File.AppendAllText(filename, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon write to form2 textbox text to text file
+
+                }
+            }
+            catch           
+            {
+                Console.WriteLine(form2.ReceivedData);  // Output the content
+                filename = @"C:\Users\s3kaju10\source\repos\Nayttotyo\tulostalletus\Laskutoimitukset.txt";  // results file path
+                File.AppendAllText(filename, form2.ReceivedData);       // kirjoitetaan form2 tekstilaatikon teksti tekstitiedostoon write to form2 textbox text to text file
+
+            }
            
 
         }
-
-
-       
+            
+        }
     }
-}
+
+
+            
+            
+    
+
+    
+    
+
+
+
+
+
+                
+
+            
+    
+            
+
+
+        
+
+    
+       
+    
+
 
 
 
